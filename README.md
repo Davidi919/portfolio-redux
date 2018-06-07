@@ -11,7 +11,7 @@ This is a redesign of my Portfolio website using mobile first design, BEM naming
 
 ## Authors
 
-* **David Inabinette** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **David Inabinette** - *Complete Work*
 
 
 ## License
