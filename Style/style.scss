@@ -1,9 +1,12 @@
-// import typefaces
+/* import typefaces*/
 @import url('https://fonts.googleapis.com/css?family=Tajawal:400,700');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
 
 // ******  begin variables  ******
 //typeface stack
 $font-stack: 'Tajawal', sans-serif;
+$copywrite-typeface: 'VT323', monospace;
 
 //test border for problem solving/troubleshooting
 $test-border: 5px solid red;
@@ -15,7 +18,7 @@ $secondary-red: #E51C2D;
 
 
 
-// Lemon reset, or also known as the Meyer reset used to help with browser inconsistancies
+/* Lemon reset, or also known as the Meyer reset used to help with browser inconsistancies */
 body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -33,7 +36,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: $font-stack;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -60,13 +63,13 @@ table {
 	border-spacing: 0;
 }
 
-//General html Rules
+/*General html Rules*/
 html {
-  font-size: 16px;
+  font-size: 14px;
 	font-family: $font-stack;
   margin: 0;
 }
-//button rules
+/*button rules*/
 .btn {
   width: auto;
   background-color: $primary-blue;
@@ -79,12 +82,12 @@ html {
   text-transform: capitalize;
 }
 
-//header sytling
+/*header sytling*/
 .header {
     margin-bottom: 2rem;
     width: 100%;
     height: 4rem;
-		//removing the bullet points and making sure LIs are block elements
+		/*removing the bullet points and making sure LIs are block elements*/
     ul {
       list-style-type: none;
 			display: block;
@@ -104,16 +107,108 @@ html {
 			}
 .avatar {
 	border: $test-border;
+	/*centering avater in the parent container*/
 	padding: auto;
 	margin: 10% auto;
 	width: 350px;
 	height: 350px;
 	img {
+		/*changing the img to a block element so it's easier to move and align */
 		display: block;
 		margin: 50px auto;
+		/*temp border-radius until actual graphics are put into place*/
+		border-radius: 50%;
 		}
 }
 .intro__title {
 	text-align: center;
 	margin: 150px;
+	font-size: 2.5rem;
+}
+.intro__img {
+	/* similar stlying as the avatar img, expcept set to a proportional width */
+	display: block;
+	margin: 0 auto;
+	width: 65%;
+	height: auto;
+}
+.abt {
+	background-color: $primary-lav;
+	margin: -25px 0 25px 0;
+	padding: 50px;
+	text-align: center;
+	line-height: 1.25rem;
+	color: white;
+}
+.abt__text {
+	display: block;
+	min-width: 400px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.work {
+	text-align: center;
+	margin: 0 auto;
+	img {
+		display: block;
+		width: 95%;
+		margin: 60px auto;
+		border: 2px solid rgb(100,100,100);
+		border-radius: 7.5px;
+	}
+	.work__caption {
+		margin-top: -50px;
+	}
+	.work__li {
+		margin: 30px;
+	}
+}
+.cta__subtitle {
+	text-align: center;
+	color: black;
+}
+.cta--long {
+	text-decoration: none;
+	color: white;
+	font-size: 3rem;
+	a {
+		text-decoration: none;
+	}
+}
+.footer {
+	background-color: $primary-lav;
+	width: 100%;
+	height: 300px;
+	.footer__img {
+		width: 100px;
+		height: 100px;
+		padding: 0;
+	}
+	.footer__ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+
+	}
+	.footer__icon {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		margin: 0 auto;
+		padding-top: 50px;
+
+	}
+	.copywrite {
+		font-family: $copywrite-typeface;
+		font-size: 2.5rem;
+		padding: 50px;
+		color: white;
+		text-align: center;
+
+	}
+
 }
