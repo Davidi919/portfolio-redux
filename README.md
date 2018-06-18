@@ -20,8 +20,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* PurpleBooth for the README template
 * [CSS-Tricks] (https://github.com/CSS-Tricks) - Always loads of helpful info
 * [CodePen] (https://codepen.io/) - A great place for ideas
-
-
