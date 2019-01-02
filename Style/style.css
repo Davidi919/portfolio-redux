@@ -89,7 +89,6 @@ html {
   margin: 1.5rem 1rem; }
 
 .avatar {
-  border: 5px solid red;
   /*centering avater in the parent container*/
   padding: auto;
   margin: 10% auto;
@@ -98,7 +97,7 @@ html {
   .avatar img {
     /*changing the img to a block element so it's easier to move and align */
     display: block;
-    margin: 50px auto;
+    margin: auto;
     /*temp border-radius until actual graphics are put into place*/
     border-radius: 50%; }
 
