@@ -1,11 +1,11 @@
 /* import typefaces*/
-@import url('https://fonts.googleapis.com/css?family=Tajawal:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
 
 // ******  begin variables  ******
 //typeface stack
-$font-stack: 'Tajawal', sans-serif;
+$font-stack: 'Quicksand', sans-serif;
 $copywrite-typeface: 'VT323', monospace;
 //test border for problem solving/troubleshooting
 $test-border: 5px solid red;
@@ -14,6 +14,7 @@ $test-border: 5px solid red;
 $primary-lav: #6F5EF0;
 $primary-blue: #007AFF;
 $secondary-red: #E51C2D;
+$secondary-blue: #06BCC1;
 
 
 
@@ -75,10 +76,14 @@ html {
   color: white;
   border-radius: 5px;
   text-align: center;
-	padding: 20px 10px 5px 10px;
+	padding: 10px 10px;
 	margin: 5px;
   text-decoration: none;
   text-transform: capitalize;
+	transition: .25s;
+	&:hover {
+		background-color: $secondary-blue;
+	}
 }
 .btn__text {
 	margin-top: 15px;
@@ -118,7 +123,6 @@ html {
 		/*changing the img to a block element so it's easier to move and align */
 		display: block;
 		margin: auto;
-		/*temp border-radius until actual graphics are put into place*/
 		border-radius: 50%;
 		}
 }
@@ -126,6 +130,7 @@ html {
 	text-align: center;
 	margin: 150px;
 	font-size: 2.5rem;
+	font-weight: 700;
 }
 .intro__img {
 	/* similar stlying as the avatar img, expcept set to a proportional width */
@@ -138,21 +143,25 @@ html {
 	background-color: $primary-lav;
 	margin: -25px 0 0 0;
 	padding-top: 40px;
-	padding-bottom: 250px;
+	padding-bottom: 125px;
 	text-align: center;
-	line-height: 1.25rem;
 	color: white;
 }
 .abt__title {
-	margin: 30% auto 0 auto;
+	margin: 80px auto 10px auto;
 	font-size: 4rem;
 }
 .abt__text {
 	display: block;
-	min-width: 400px;
+	min-width: 300px;
 	max-width: 800px;
-	margin: 25px auto 50px auto;
-}
+	margin: 15px auto;
+	padding: 0px 20px;
+	/*letter-spacing: -0.05rem;*/
+	line-height: 1.95rem;
+	font-size: 1.5rem;
+	}
+
 
 .work {
 	text-align: center;
@@ -166,13 +175,18 @@ html {
 		border-radius: 7.5px;
 	}
 	.work__title {
-		padding-top: 100px;
+		padding-top: 50px;
 		font-size: 4rem;
 	}
+	.work--subTitle {
+		margin: 10px auto;
+		font-size: 1.5rem;
+	}
 	.work__caption {
-		margin-top: -40px;
+		margin-top: -50px;
 		padding-left: 30px;
 		padding-right: 30px;
+
 	}
 	.work__li {
 		margin: 30px;
@@ -189,6 +203,10 @@ html {
 
 	a {
 		text-decoration: none;
+		:hover {
+			background-color: $primary-blue;
+			border: 5px solid $primary-blue;
+		}
 	}
 }
 .btn__cta--long {
@@ -199,8 +217,9 @@ html {
 	color: white;
 	font-size: 6rem;
 	font-weight: bold;
+	transition: .5s;
 	&:active {
-		background-color: $primary-blue;
+		background-color: $primary-lav;
 		color: white;
 		border: 10px solid $primary-blue;
 	}
@@ -214,31 +233,32 @@ html {
 		width: 100px;
 		height: 100px;
 		padding: 0;
+		-webkit-filter: brightness(.75);
+		        filter: brightness(.75);
+		transition: .25s;
+		&:hover {
+			-webkit-filter: brightness(1.1);
+			        filter: brightness(1.1);
+		}
 	}
 	.footer__ul {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
 
 	}
 	.footer__icon {
-		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
-		-webkit-box-align: center;
-		    -ms-flex-align: center;
-		        align-items: center;
+		justify-content: center;
+		align-items: center;
 		margin: 0 auto;
 		padding-top: 50px;
 
 	}
 	.copywrite {
 		font-family: $copywrite-typeface;
-		letter-spacing: .5rem;
-		font-size: 2.5rem;
+		letter-spacing: .25rem;
+		font-size: 1.5rem;
 		padding-top: 100px;
 		padding-bottom: 0;
-		color: #C6C6C6;
+		color: rgba(#d7d7d7, 0.8);
 		text-align: center;
 
 	}

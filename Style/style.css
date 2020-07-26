@@ -1,5 +1,5 @@
 /* import typefaces*/
-@import url("https://fonts.googleapis.com/css?family=Tajawal:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=VT323");
 /* Lemon reset, or also known as the Meyer reset used to help with browser inconsistancies */
 body, div, span, applet, object, iframe,
@@ -19,37 +19,45 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: "Tajawal", sans-serif;
-  vertical-align: baseline; }
+  font-family: "Quicksand", sans-serif;
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 /*General html Rules*/
 html {
   font-size: 14px;
-  font-family: "Tajawal", sans-serif;
-  margin: 0; }
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+}
 
 /*button rules*/
 .btn {
@@ -58,110 +66,146 @@ html {
   color: white;
   border-radius: 5px;
   text-align: center;
-  padding: 20px 10px 5px 10px;
+  padding: 10px 10px;
   margin: 5px;
   text-decoration: none;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  transition: 0.25s;
+}
+.btn:hover {
+  background-color: #06BCC1;
+}
 
 .btn__text {
   margin-top: 15px;
-  padding: 0; }
+  padding: 0;
+}
 
 /*header sytling*/
 .header {
   margin-bottom: 2rem;
   width: 100%;
   height: 4rem;
-  /*removing the bullet points and making sure LIs are block elements*/ }
-  .header ul {
-    list-style-type: none;
-    display: block; }
+  /*removing the bullet points and making sure LIs are block elements*/
+}
+.header ul {
+  list-style-type: none;
+  display: block;
+}
 
 .header--cta {
   float: right;
   clear: right;
-  margin: 3rem .75rem;
-  font-size: 3rem; }
+  margin: 3rem 0.75rem;
+  font-size: 3rem;
+}
 
 .header--logo {
   float: left;
   clear: left;
-  margin: 1.5rem 1rem; }
+  margin: 1.5rem 1rem;
+}
 
 .avatar {
   /*centering avater in the parent container*/
   padding: auto;
   margin: 10% auto;
   width: 350px;
-  height: 350px; }
-  .avatar img {
-    /*changing the img to a block element so it's easier to move and align */
-    display: block;
-    margin: auto;
-    /*temp border-radius until actual graphics are put into place*/
-    border-radius: 50%; }
+  height: 350px;
+}
+.avatar img {
+  /*changing the img to a block element so it's easier to move and align */
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+}
 
 .intro__title {
   text-align: center;
   margin: 150px;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  font-weight: 700;
+}
 
 .intro__img {
   /* similar stlying as the avatar img, expcept set to a proportional width */
   display: block;
   margin: 0 auto;
   width: 65%;
-  height: auto; }
+  height: auto;
+}
 
 .abt {
   background-color: #6F5EF0;
   margin: -25px 0 0 0;
   padding-top: 40px;
-  padding-bottom: 250px;
+  padding-bottom: 125px;
   text-align: center;
-  line-height: 1.25rem;
-  color: white; }
+  color: white;
+}
 
 .abt__title {
-  margin: 30% auto 0 auto;
-  font-size: 4rem; }
+  margin: 80px auto 10px auto;
+  font-size: 4rem;
+}
 
 .abt__text {
   display: block;
-  min-width: 400px;
+  min-width: 300px;
   max-width: 800px;
-  margin: 25px auto 50px auto; }
+  margin: 15px auto;
+  padding: 0px 20px;
+  /*letter-spacing: -0.05rem;*/
+  line-height: 1.95rem;
+  font-size: 1.5rem;
+}
 
 .work {
   text-align: center;
-  margin: 0 auto; }
-  .work img {
-    display: block;
-    height: auto;
-    width: 95%;
-    margin: 60px auto;
-    border: 2px solid #646464;
-    border-radius: 7.5px; }
-  .work .work__title {
-    padding-top: 100px;
-    font-size: 4rem; }
-  .work .work__caption {
-    margin-top: -40px;
-    padding-left: 30px;
-    padding-right: 30px; }
-  .work .work__li {
-    margin: 30px; }
+  margin: 0 auto;
+}
+.work img {
+  display: block;
+  height: auto;
+  width: 95%;
+  margin: 60px auto;
+  border: 2px solid #646464;
+  border-radius: 7.5px;
+}
+.work .work__title {
+  padding-top: 50px;
+  font-size: 4rem;
+}
+.work .work--subTitle {
+  margin: 10px auto;
+  font-size: 1.5rem;
+}
+.work .work__caption {
+  margin-top: -50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.work .work__li {
+  margin: 30px;
+}
 
 .cta__subtitle {
   text-align: center;
-  color: black; }
+  color: black;
+}
 
 .cta--long {
   padding: 100px 0;
   text-decoration: none;
-  font-size: 3rem; }
-  .cta--long a {
-    text-decoration: none; }
+  font-size: 3rem;
+}
+.cta--long a {
+  text-decoration: none;
+}
+.cta--long a :hover {
+  background-color: #007AFF;
+  border: 5px solid #007AFF;
+}
 
 .btn__cta--long {
   border: 10px solid white;
@@ -170,41 +214,50 @@ html {
   background-color: #6F5EF0;
   color: white;
   font-size: 6rem;
-  font-weight: bold; }
-  .btn__cta--long:active {
-    background-color: #007AFF;
-    color: white;
-    border: 10px solid #007AFF; }
+  font-weight: bold;
+  transition: 0.5s;
+}
+.btn__cta--long:active {
+  background-color: #6F5EF0;
+  color: white;
+  border: 10px solid #007AFF;
+}
 
 .footer {
   background-color: #6F5EF0;
   width: 100%;
   height: 800px;
-  margin-bottom: -10px; }
-  .footer .footer__img {
-    width: 100px;
-    height: 100px;
-    padding: 0; }
-  .footer .footer__ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .footer .footer__icon {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 50px; }
-  .footer .copywrite {
-    font-family: "VT323", monospace;
-    letter-spacing: .5rem;
-    font-size: 2.5rem;
-    padding-top: 100px;
-    padding-bottom: 0;
-    color: #C6C6C6;
-    text-align: center; }
+  margin-bottom: -10px;
+}
+.footer .footer__img {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  -webkit-filter: brightness(0.75);
+  filter: brightness(0.75);
+  transition: 0.25s;
+}
+.footer .footer__img:hover {
+  -webkit-filter: brightness(1.1);
+  filter: brightness(1.1);
+}
+.footer .footer__ul {
+  display: flex;
+}
+.footer .footer__icon {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.footer .copywrite {
+  font-family: "VT323", monospace;
+  letter-spacing: 0.25rem;
+  font-size: 1.5rem;
+  padding-top: 100px;
+  padding-bottom: 0;
+  color: rgba(215, 215, 215, 0.8);
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */
