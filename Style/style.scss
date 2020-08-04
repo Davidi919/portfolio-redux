@@ -1,11 +1,11 @@
 /* import typefaces*/
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
 
 // ******  begin variables  ******
 //typeface stack
-$font-stack: 'Quicksand', sans-serif;
+$font-stack: 'Recursive', sans-serif;
 $copywrite-typeface: 'VT323', monospace;
 //test border for problem solving/troubleshooting
 $test-border: 5px solid red;
@@ -112,13 +112,17 @@ html {
 				float: left;
 				clear: left;
 				margin: 1.5rem 1rem;
+				img {
+					width: 175px;
+					height: 80px;
+				}
 			}
 .avatar {
 	/*centering avater in the parent container*/
 	padding: auto;
 	margin: 10% auto;
-	width: 350px;
-	height: 350px;
+	width: 375px;
+	height: 375px;
 	img {
 		/*changing the img to a block element so it's easier to move and align */
 		display: block;

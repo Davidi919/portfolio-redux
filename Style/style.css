@@ -1,5 +1,5 @@
 /* import typefaces*/
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=VT323");
 /* Lemon reset, or also known as the Meyer reset used to help with browser inconsistancies */
 body, div, span, applet, object, iframe,
@@ -19,7 +19,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Recursive", sans-serif;
   vertical-align: baseline;
 }
 
@@ -55,7 +55,7 @@ table {
 /*General html Rules*/
 html {
   font-size: 14px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Recursive", sans-serif;
   margin: 0;
 }
 
@@ -105,13 +105,17 @@ html {
   clear: left;
   margin: 1.5rem 1rem;
 }
+.header--logo img {
+  width: 175px;
+  height: 80px;
+}
 
 .avatar {
   /*centering avater in the parent container*/
   padding: auto;
   margin: 10% auto;
-  width: 350px;
-  height: 350px;
+  width: 375px;
+  height: 375px;
 }
 .avatar img {
   /*changing the img to a block element so it's easier to move and align */
