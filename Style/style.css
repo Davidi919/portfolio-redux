@@ -85,7 +85,7 @@ html {
 .header {
   margin-bottom: 2rem;
   width: 100%;
-  height: 4rem;
+  height: 8.5em;
   /*removing the bullet points and making sure LIs are block elements*/
 }
 .header ul {
@@ -103,18 +103,17 @@ html {
 .header--logo {
   float: left;
   clear: left;
+  padding: 10px 10px;
   margin: 2rem 0.75rem;
-}
-.header--logo img {
-  width: 15rem;
-  height: auto;
+  font-size: 3.5rem;
+  color: #007AFF;
 }
 
 .avatar {
   padding: auto;
   margin: 10% auto 7rem auto;
-  width: 30rem;
-  height: 30rem;
+  width: 20rem;
+  height: 20rem;
 }
 .avatar img {
   display: block;
@@ -170,10 +169,10 @@ html {
 .work img {
   display: block;
   height: auto;
-  width: 95%;
+  width: 60%;
   margin: 60px auto;
   border: 2px solid #646464;
-  border-radius: 7.5px;
+  border-radius: 2px;
 }
 .work .work__title {
   padding-top: 50px;
@@ -188,8 +187,33 @@ html {
   padding-left: 30px;
   padding-right: 30px;
 }
-.work .work__li {
-  margin: 30px;
+.work ul {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+.work #grid__container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 30em);
+  grid-gap: 5px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.work #grid__container > div {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.work_card {
+  align-content: stretch;
+}
+.work_card img {
+  width: 28em;
+}
+.work_card img:hover {
+  box-shadow: 0px 0px 4px;
+  transition: 0.3s;
 }
 
 .cta__subtitle {
@@ -233,11 +257,11 @@ html {
   margin-bottom: -10px;
 }
 .footer .footer__img {
-  width: 100px;
-  height: 100px;
+  width: 5em;
+  height: auto;
   padding: 0;
-  -webkit-filter: brightness(0.75);
-  filter: brightness(0.75);
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
   transition: 0.25s;
 }
 .footer .footer__img:hover {
@@ -245,7 +269,12 @@ html {
   filter: brightness(1.1);
 }
 .footer .footer__ul {
+  width: 100%;
   display: flex;
+  justify-content: center;
+}
+.footer .footer__ul li {
+  justify-content: center;
 }
 .footer .footer__icon {
   justify-content: center;

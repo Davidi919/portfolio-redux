@@ -94,12 +94,12 @@ html {
 .header {
     margin-bottom: 2rem;
     width: 100%;
-    height: 4rem;
+    height: 8.5em;
+		//box-shadow: 0 5px 10px -1px rgb(200,200,200);
 		/*removing the bullet points and making sure LIs are block elements*/
     ul {
       list-style-type: none;
 			display: block;
-
       }
       }
 .header--cta {
@@ -111,18 +111,22 @@ html {
 .header--logo {
 				float: left;
 				clear: left;
+				padding: 10px 10px;
 				margin: 2rem .75rem;
-				img {
-					width: 15rem;
-					height: auto;
+				font-size: 3.5rem;
+				color: $primary-blue;
+				//img settings for graphic logo instead of text version
+				//graphic version still in the works
+				//img {
+					//width: 15rem;
+					//height: auto;
 
 				}
-			}
 .avatar {
 	padding: auto;
 	margin: 10% auto 7rem auto;
-	width: 30rem;
-	height: 30rem;
+	width: 20rem;
+	height: 20rem;
 	img {
 		display: block;
 		margin: auto;
@@ -174,10 +178,10 @@ html {
 	img {
 		display: block;
 		height: auto;
-		width: 95%;
+		width: 60%;
 		margin: 60px auto;
 		border: 2px solid rgb(100,100,100);
-		border-radius: 7.5px;
+		border-radius: 2px;
 	}
 	.work__title {
 		padding-top: 50px;
@@ -191,10 +195,34 @@ html {
 		margin-top: -50px;
 		padding-left: 30px;
 		padding-right: 30px;
-
 	}
-	.work__li {
-		margin: 30px;
+	ul {
+		display: inline-block;
+		width: auto;
+		height: auto;
+	}
+	#grid__container {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(auto-fill, 30em);
+		grid-gap: 5px;
+		background-color: #2196F3;
+		padding: 10px;
+}
+#grid__container > div {
+	text-align: center;
+	padding: 15px 0;
+	}
+}
+
+.work_card {
+	align-content: stretch;
+	img {
+		width: 28em;
+	}
+		img:hover {
+			box-shadow: 0px 0px 4px;
+			transition: .3s;
 	}
 }
 .cta__subtitle {
@@ -235,11 +263,11 @@ html {
 	height: 800px;
 	margin-bottom: -10px;
 	.footer__img {
-		width: 100px;
-		height: 100px;
+		width: 5em;
+		height: auto;
 		padding: 0;
-		-webkit-filter: brightness(.75);
-		        filter: brightness(.75);
+		-webkit-filter: brightness(.9);
+		        filter: brightness(.9);
 		transition: .25s;
 		&:hover {
 			-webkit-filter: brightness(1.1);
@@ -247,7 +275,12 @@ html {
 		}
 	}
 	.footer__ul {
+		width: 100%;
 		display: flex;
+		justify-content: center;
+		li {
+			justify-content: center;
+		}
 
 	}
 	.footer__icon {
