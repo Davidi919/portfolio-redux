@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  background-color: whitesmoke;
 }
 
 ol, ul {
@@ -100,7 +101,7 @@ html {
   font-size: 3rem;
 }
 
-.header--logo {
+.header--logo span {
   float: left;
   clear: left;
   padding: 10px 10px;
@@ -121,6 +122,10 @@ html {
   border-radius: 50%;
 }
 
+#intro-wrapper {
+  background-color: whitesmoke;
+}
+
 .intro__title {
   text-align: center;
   margin: 4rem;
@@ -133,6 +138,7 @@ html {
   /* similar stlying as the avatar img, expcept set to a proportional width */
   display: block;
   margin: 0 auto;
+  padding-left: 0;
   width: 35rem;
   height: auto;
 }
@@ -174,6 +180,12 @@ html {
   border: 2px solid #646464;
   border-radius: 2px;
 }
+.work #work-title_wrapper {
+  color: black;
+  background-color: whitesmoke;
+  width: auto;
+  padding-bottom: 10px;
+}
 .work .work__title {
   padding-top: 50px;
   font-size: 4rem;
@@ -186,6 +198,7 @@ html {
   margin-top: -50px;
   padding-left: 30px;
   padding-right: 30px;
+  color: black;
 }
 .work ul {
   display: inline-block;
@@ -197,7 +210,7 @@ html {
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 30em);
   grid-gap: 5px;
-  background-color: #2196F3;
+  background-color: whitesmoke;
   padding: 10px;
 }
 .work #grid__container > div {
@@ -206,10 +219,13 @@ html {
 }
 
 .work_card {
-  align-content: stretch;
+  align-content: center;
 }
 .work_card img {
   width: 28em;
+  height: 16em;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .work_card img:hover {
   box-shadow: 0px 0px 4px;
@@ -231,7 +247,11 @@ html {
 }
 .cta--long a :hover {
   background-color: #007AFF;
-  border: 5px solid #007AFF;
+  border-color: #007AFF;
+}
+.cta--long p {
+  margin: 0;
+  padding: 8px;
 }
 
 .btn__cta--long {
@@ -245,9 +265,8 @@ html {
   transition: 0.5s;
 }
 .btn__cta--long:active {
-  background-color: #6F5EF0;
-  color: white;
-  border: 10px solid #007AFF;
+  background-color: #007AFF;
+  border-color: #007AFF;
 }
 
 .footer {

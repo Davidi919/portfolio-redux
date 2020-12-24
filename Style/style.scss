@@ -15,6 +15,7 @@ $primary-lav: #6F5EF0;
 $primary-blue: #007AFF;
 $secondary-red: #E51C2D;
 $secondary-blue: #06BCC1;
+$bg-white: rgb(245,245,245);
 
 
 
@@ -46,6 +47,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: $bg-white;
 }
 ol, ul {
 	list-style: none;
@@ -108,7 +110,7 @@ html {
 				margin: 3rem .75rem;
 				font-size: 3rem;
 			}
-.header--logo {
+.header--logo span{
 				float: left;
 				clear: left;
 				padding: 10px 10px;
@@ -122,6 +124,7 @@ html {
 					//height: auto;
 
 				}
+
 .avatar {
 	padding: auto;
 	margin: 10% auto 7rem auto;
@@ -132,6 +135,9 @@ html {
 		margin: auto;
 		border-radius: 50%;
 		}
+}
+#intro-wrapper {
+	background-color: $bg-white;
 }
 .intro__title {
 	text-align: center;
@@ -145,6 +151,7 @@ html {
 	/* similar stlying as the avatar img, expcept set to a proportional width */
 	display: block;
 	margin: 0 auto;
+	padding-left: 0;
 	width: 35rem;
 	height: auto;
 }
@@ -183,6 +190,13 @@ html {
 		border: 2px solid rgb(100,100,100);
 		border-radius: 2px;
 	}
+	#work-title_wrapper {
+		//border: $test-border;
+		color: black;
+		background-color: $bg-white;
+		width:auto;
+		padding-bottom: 10px;
+	}
 	.work__title {
 		padding-top: 50px;
 		font-size: 4rem;
@@ -195,6 +209,7 @@ html {
 		margin-top: -50px;
 		padding-left: 30px;
 		padding-right: 30px;
+		color: black;
 	}
 	ul {
 		display: inline-block;
@@ -206,7 +221,7 @@ html {
 		justify-content: center;
 		grid-template-columns: repeat(auto-fill, 30em);
 		grid-gap: 5px;
-		background-color: #2196F3;
+		background-color: $bg-white;
 		padding: 10px;
 }
 #grid__container > div {
@@ -216,9 +231,12 @@ html {
 }
 
 .work_card {
-	align-content: stretch;
+	align-content: center;
 	img {
 		width: 28em;
+		height: 16em;
+		-o-object-fit: cover;
+		   object-fit: cover;
 	}
 		img:hover {
 			box-shadow: 0px 0px 4px;
@@ -238,8 +256,12 @@ html {
 		text-decoration: none;
 		:hover {
 			background-color: $primary-blue;
-			border: 5px solid $primary-blue;
+			border-color: $primary-blue;
 		}
+	}
+	p {
+		margin: 0;
+		padding: 8px;
 	}
 }
 .btn__cta--long {
@@ -252,9 +274,8 @@ html {
 	font-weight: bold;
 	transition: .5s;
 	&:active {
-		background-color: $primary-lav;
-		color: white;
-		border: 10px solid $primary-blue;
+		background-color: $primary-blue;
+		border-color: $primary-blue;
 	}
 }
 .footer {
