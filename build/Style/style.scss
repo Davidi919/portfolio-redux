@@ -1,0 +1,325 @@
+/* import typefaces*/
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+
+// ******  begin variables  ******
+//typeface stack
+$font-stack: 'Recursive', sans-serif;
+$copywrite-typeface: 'VT323', monospace;
+//test border for problem solving/troubleshooting
+$test-border: 5px solid red;
+
+//color palette variables
+$primary-lav: #6F5EF0;
+$primary-blue: #007AFF;
+$secondary-red: #E51C2D;
+$secondary-blue: #06BCC1;
+$bg-white: rgb(245,245,245);
+
+
+
+/* Lemon reset, or also known as the Meyer reset used to help with browser inconsistancies */
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: $font-stack;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: $bg-white;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*General html Rules*/
+html {
+  font-size: 14px;
+	font-family: $font-stack;
+  margin: 0;
+}
+/*button rules*/
+.btn {
+  width: auto;
+  background-color: $primary-blue;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+	padding: 10px 10px;
+	margin: 5px;
+  text-decoration: none;
+  text-transform: capitalize;
+	transition: .25s;
+	&:hover {
+		background-color: $secondary-blue;
+	}
+}
+.btn__text {
+	margin-top: 15px;
+	padding: 0;
+}
+
+/*header sytling*/
+.header {
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 8.5em;
+		//box-shadow: 0 5px 10px -1px rgb(200,200,200);
+		/*removing the bullet points and making sure LIs are block elements*/
+    ul {
+      list-style-type: none;
+			display: block;
+      }
+      }
+.header--cta {
+				float: right;
+				clear: right;
+				margin: 3rem .75rem;
+				font-size: 3rem;
+			}
+.header--logo span{
+				float: left;
+				clear: left;
+				padding: 10px 10px;
+				margin: 2rem .75rem;
+				font-size: 3.5rem;
+				color: $primary-blue;
+				//img settings for graphic logo instead of text version
+				//graphic version still in the works
+				//img {
+					//width: 15rem;
+					//height: auto;
+
+				}
+
+.avatar {
+	padding: auto;
+	margin: 10% auto 7rem auto;
+	width: 20rem;
+	height: 20rem;
+	img {
+		display: block;
+		margin: auto;
+		border-radius: 50%;
+		}
+}
+#intro-wrapper {
+	background-color: $bg-white;
+}
+.intro__title {
+	text-align: center;
+	margin: 4rem;
+	font-size: 2.5rem;
+	font-weight: 700;
+	min-width: 375px;
+
+}
+.intro__img {
+	/* similar stlying as the avatar img, expcept set to a proportional width */
+	display: block;
+	margin: 0 auto;
+	padding-left: 0;
+	width: 35rem;
+	height: auto;
+}
+.abt {
+	background-color: $primary-lav;
+	margin: -25px 0 0 0;
+	padding-top: 40px;
+	padding-bottom: 125px;
+	text-align: center;
+	color: white;
+}
+.abt__title {
+	margin: 80px auto 10px auto;
+	font-size: 4rem;
+}
+.abt__text {
+	display: block;
+	min-width: 300px;
+	max-width: 800px;
+	margin: 15px auto;
+	padding: 0px 20px;
+	/*letter-spacing: -0.05rem;*/
+	line-height: 1.95rem;
+	font-size: 1.5rem;
+	}
+
+
+.work {
+	text-align: center;
+	margin: 0 auto;
+	img {
+		display: block;
+		height: auto;
+		width: 60%;
+		margin: 60px auto;
+		border: 2px solid rgb(100,100,100);
+		border-radius: 2px;
+	}
+	#work-title_wrapper {
+		//border: $test-border;
+		color: black;
+		background-color: $bg-white;
+		width:auto;
+		padding-bottom: 10px;
+	}
+	.work__title {
+		padding-top: 50px;
+		font-size: 4rem;
+	}
+	.work--subTitle {
+		margin: 10px auto;
+		font-size: 1.5rem;
+	}
+	.work__caption {
+		margin-top: -50px;
+		padding-left: 30px;
+		padding-right: 30px;
+		color: black;
+	}
+	ul {
+		display: inline-block;
+		width: auto;
+		height: auto;
+	}
+	#grid__container {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(auto-fill, 30em);
+		grid-gap: 5px;
+		background-color: $bg-white;
+		padding: 10px;
+}
+#grid__container > div {
+	text-align: center;
+	padding: 15px 0;
+	}
+}
+
+.work_card {
+	align-content: center;
+	img {
+		width: 28em;
+		height: 16em;
+		-o-object-fit: cover;
+		   object-fit: cover;
+	}
+		img:hover {
+			box-shadow: 0px 0px 4px;
+			transition: .3s;
+	}
+}
+.cta__subtitle {
+	text-align: center;
+	color: black;
+}
+.cta--long {
+	padding: 100px 0;
+	text-decoration: none;
+	font-size: 3rem;
+
+	a {
+		text-decoration: none;
+		:hover {
+			background-color: $primary-blue;
+			border-color: $primary-blue;
+		}
+	}
+	p {
+		margin: 0;
+		padding: 8px;
+	}
+}
+.btn__cta--long {
+	border: 10px solid white;
+	margin: 45px;
+	border-radius: 15px;
+	background-color: $primary-lav;
+	color: white;
+	font-size: 6rem;
+	font-weight: bold;
+	transition: .5s;
+	&:active {
+		background-color: $primary-blue;
+		border-color: $primary-blue;
+	}
+}
+.footer {
+	background-color: $primary-lav;
+	width: 100%;
+	height: 800px;
+	margin-bottom: -10px;
+	.footer__img {
+		width: 5em;
+		height: auto;
+		padding: 0;
+		-webkit-filter: brightness(.9);
+		        filter: brightness(.9);
+		transition: .25s;
+		&:hover {
+			-webkit-filter: brightness(1.1);
+			        filter: brightness(1.1);
+		}
+	}
+	.footer__ul {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		li {
+			justify-content: center;
+		}
+
+	}
+	.footer__icon {
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		padding-top: 50px;
+
+	}
+	.copywrite {
+		font-family: $copywrite-typeface;
+		letter-spacing: .25rem;
+		font-size: 1.5rem;
+		padding-top: 100px;
+		padding-bottom: 0;
+		color: rgba(#d7d7d7, 0.8);
+		text-align: center;
+
+	}
+
+}
