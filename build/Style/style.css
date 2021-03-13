@@ -2,19 +2,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=VT323");
 /* Lemon reset, or also known as the Meyer reset used to help with browser inconsistancies */
-body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,23 +90,36 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 body {
   line-height: 1;
   background-color: whitesmoke; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none; }
 
 table {
@@ -52,58 +132,51 @@ html {
   font-family: "Recursive", sans-serif;
   margin: 0; }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  width: 100%;
+  height: 100%; }
+
+.pic_circ {
+  border-radius: 50%; }
+
 /*button rules*/
 .btn {
-  width: auto;
+  width: 155px;
+  height: 60px;
+  font-size: 2rem;
   background-color: #007AFF;
   color: white;
   border-radius: 5px;
-  text-align: center;
-  padding: 10px 10px;
-  margin: 5px;
-  text-decoration: none;
   text-transform: capitalize;
-  transition: .25s; }
+  margin: 5px;
+  transition: 0.25s;
+  box-shadow: 3px 3px #4f44aa; }
+  .btn .btn-link {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .btn:hover {
-    background-color: #06BCC1; }
-
-.btn__text {
-  margin-top: 15px;
-  padding: 0; }
+    background-color: #005DFF; }
+  .btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: none; }
 
 /*header sytling*/
-.header {
-  margin-bottom: 2rem;
+header {
+  margin: 20px auto 70px auto;
   width: 100%;
-  height: 8.5em;
-  /*removing the bullet points and making sure LIs are block elements*/ }
-  .header ul {
-    list-style-type: none;
-    display: block; }
-
-.header--cta {
-  float: right;
-  clear: right;
-  margin: 3rem .75rem;
-  font-size: 3rem; }
-
-.header--logo span {
-  float: left;
-  clear: left;
-  padding: 10px 10px;
-  margin: 2rem .75rem;
-  font-size: 3.5rem;
-  color: #007AFF; }
-
-.avatar {
-  padding: auto;
-  margin: 10% auto 7rem auto;
-  width: 20rem;
-  height: 20rem; }
-  .avatar img {
-    display: block;
-    margin: auto;
-    border-radius: 50%; }
+  height: 8.5em; }
+  header .header-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  header .header_profile {
+    margin: 5px auto auto 20px; }
+  header .header-cta {
+    margin: auto 20px auto auto; }
 
 #intro-wrapper {
   background-color: whitesmoke; }
@@ -124,7 +197,7 @@ html {
   height: auto; }
 
 .abt {
-  background-color: #6F5EF0;
+  background-color: #6f5ef0;
   margin: -25px 0 0 0;
   padding-top: 40px;
   padding-bottom: 125px;
@@ -195,7 +268,7 @@ html {
     object-fit: cover; }
   .work_card img:hover {
     box-shadow: 0px 0px 4px;
-    transition: .3s; }
+    transition: 0.3s; }
 
 .cta__subtitle {
   text-align: center;
@@ -218,17 +291,17 @@ html {
   border: 10px solid white;
   margin: 45px;
   border-radius: 15px;
-  background-color: #6F5EF0;
+  background-color: #6f5ef0;
   color: white;
   font-size: 6rem;
   font-weight: bold;
-  transition: .5s; }
+  transition: 0.5s; }
   .btn__cta--long:active {
     background-color: #007AFF;
     border-color: #007AFF; }
 
 .footer {
-  background-color: #6F5EF0;
+  background-color: #6f5ef0;
   width: 100%;
   height: 800px;
   margin-bottom: -10px; }
@@ -238,7 +311,7 @@ html {
     padding: 0;
     -webkit-filter: brightness(0.9);
     filter: brightness(0.9);
-    transition: .25s; }
+    transition: 0.25s; }
     .footer .footer__img:hover {
       -webkit-filter: brightness(1.1);
       filter: brightness(1.1); }
@@ -255,7 +328,7 @@ html {
     padding-top: 50px; }
   .footer .copywrite {
     font-family: "VT323", monospace;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     font-size: 1.5rem;
     padding-top: 100px;
     padding-bottom: 0;

@@ -1,156 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Hello to whomever is reading my comments!
+  <!-- Hello to whomever is reading my comments!
   Whether you're inpsecting my portfolio to hire me, or because you liked my design and want to know how I built it,
   I welcome you. Let me know if there's any suggestions that you have on it or if you simply liked how the paged looked.
   Either way, cheers and thanks for reading. -->
 
   <head>
-    <title> David Inabinette | Web Developer & Designer</title>
+    <title>David Inabinette | Web Developer & Designer</title>
     <!-- css link -->
-    <link href="./Style/style.css" type="text/css" rel="stylesheet">
+    <link href="./Style/style.css" type="text/css" rel="stylesheet" />
     <!-- Meta data -->
-    <meta charset="UTF-8">
-    <meta name="author" content="David Inabinette">
-    <meta name="description" content="A web developer and designer with real people experience from around the world">
-
+    <meta charset="UTF-8" />
+    <meta name="author" content="David Inabinette" />
+    <meta
+      name="description"
+      content="A web developer and designer with real people experience from around the world"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#007AFF" />
+    <meta name="robots" content="index,follow" />
+    <!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow" />
+    <!-- Google Specific -->
   </head>
-<body>
-  <!-- main body body__container -->
-  <div id='body__container'>
-    <!-- begin header list, this contains my logo and a CTA -->
-    <div id="intro-wrapper">
-    <div class="header">
-      <ul class="header__ul">
-        <li class="header__li header--logo">
-          <span class="logo_btn--text">< DIV ></span>
-        </li>
-        <li class="header__li header--cta">
-          <a class="btn btn--cta" href="mailto:david.inabinette@gmail.com?Subject=Portfolio%20website" target="_top">
-          <span class="btn__text">Say hi!</span>
-        </a>
-      </ul>
-      </div>
-      <!-- end of header ul -->
+  <body>
+    <!-- main body body__container -->
+    <div id="body__con">
+      <header class="header-wrapper">
+        <div class="header-con">
+          <div class="header_profile">
+            <img class="profile_pic pic_circ" src="Content\Images\content\DI_LI.png" />
+          </div>
+          <div class="header-cta btn">
+            <a class="btn_link" href="mailto:david.inabinette@gmail.com?Subject=Portfolio%20website" >
+              <span class="btn_text">CONTACT</span>
+            </a>
+          </div>
+        </div>
+      </header>
 
-      <!-- My avatar -->
-      <div class="avatar">
-        <img class="avatar__img" src="Content/Images/Portfolio_Avatar.svg">
+      <div id="intro-wrapper">
+        <div class="intro-con">
+          <div class="intro">
+            <h1 class="intro__title intro--main">David Inabinette</h1>
+            <h2 class="title_subtext">Front-end Developer <br />&<br />Designer</h2>
+          </div>
+          <div class="intro_img-con">
+            <img
+              class="computer_img"
+              src="Content\Images\content\Desktop Computer.svg" />
+          </div>
+          </div>
+        </div>
+        <div class="abt abt--bgColor">
+          <p class="abt__text">I’m a web developer and designer living in New York, NY. I’m passionate about the user’s experience and making sure that the website’s intent comes across on all devices, which makes me a big believer in mobile first designs. For development, I mostly work with HTML, CSS/SCSS, additionally, I have experience in PHP. I’m also comfortable in the Adobe Suite(Illustrator, Photoshop, XD, Indesign).
+          </p>
+        </div>
       </div>
-      <div class="intro">
-      <h1 class="intro__title intro--main">Front-end Developer <br /> & <br />Designer</h1>
-      <div class="intro__img">
-        <img src="Content/Images/Porfolio_Desktop.svg" alt="Coding Computer">
-      </div>
-    </div>
-    <!-- end of intro/landing page -->
-    </div>
-    <div class="abt abt--bgColor">
-      <h2 class="abt__title">Well hey, there! 🤠</h2>
-      <p class="abt__text">Nice to meet you, my name is David. I have a passion for web development which in turn makes design a go to for me. I'm a big believer in mobile first design so that it's easily scalable to large screen formats. I also love clean, crisp, and modern designs, so I'd be a perfect eye for whatever you're trying to accomplish.</p>
-    </div>
 
-    <!-- My recent work ul, here will be at least the last 3 work items -->
-    <div class="work">
-      <div id="work-title_wrapper">
-      <h2 class="work__title">My Recent Work</h2>
-      <h3 class="work--subTitle">Here is some of my latest works</h3>
-    </div>
-      <div id=grid__container>
-        <div class="work_card work--5">
-          <a class="work_card--link" href="Content/Images/Funnel_Mobile_Layout.jpg" target="_blank">
-            <img class="work__img3" src="Content/Images/Funnel_Thumbnail.png" alt="Blog post using CSS Grids">
-          </a>
-          <p class="work__caption">I redesigned and optimized a user application funnel</p>
+      <!-- My recent work ul, here will be at least the last 3 work items -->
+      <div class="work_wrapper">
+        <div id="work-title_con">
+          <h1 class="work__title">My Recent Work</h1>
         </div>
-        <div class="work_card work--3">
-          <a class="work_card--link" href="Content/Images/Wag.png" target="_blank">
-            <img class="work__img3" src="Content/Images/Wag-InVision--thumb.png" alt="UX Review">
-          </a>
-          <p class="work__caption">I reviewed and marked up various UX funnels for best and worst practices.</p>
-        </div>
-      <div class="work_card work--1">
-        <a href="./Content/Images/BCR__Design.png" target="_blank">
-        <img class="work__img1" src="./Content/Images/BCR__Thumbnail.svg" alt="Credit Repair web design"></a>
-        <p class="work__caption">I designed a Credit Repair's website using Adobe Photoshop and Adobe Illustrator</p>
-      </div>
-      <div class="work_card work--2">
-        <a class="work_card--link" href="https://bhgaragedoor.net/" target="_blank">
-          <img class="work__img2" src="Content/Images/BHGarageDoor.jpg" alt="BH Garagedoor design">
-        </a>
-        <p class="work__caption">I helped to develop the front-end for this website</p>
-      </div>
-        <div class="work_card work--3">
-          <a class="work_card--link" href="Content/Examples/gridTemplate/Gird_Framework.html" target="_blank">
-            <img class="work__img3" src="Content/Images/BlogPost.jpg" alt="Blog post using CSS Grids">
-          </a>
-          <p class="work__caption">I built a blog post style website using CSS Grids to align everything</p>
-        </div>
-        <div class="work_card work--4">
-          <a class="work_card--link" href="Content/Images/ManlyZone.png" target="_blank">
-            <img class="work__img3" src="Content/Images/Manly-Zone_Thumbnail.png" alt="Blog post using CSS Grids">
-          </a>
-          <p class="work__caption">I helped by implimenting a design into a wordpress site</p>
-        </div>
+        <div id="grid__container">
+          <div class="work_card work--5">
+            <a
+              class="work_card--link"
+              href="Content/Images/Funnel_Mobile_Layout.jpg"
+              target="_blank"
+            >
+              <img
+                class="work__img3"
+                src="Content/Images/Funnel_Thumbnail.png"
+                alt="Blog post using CSS Grids"
+              />
+            </a>
+            <p class="work__caption">
+              I redesigned and optimized a user application funnel
+            </p>
+          </div>
+          <div class="work_card work--3">
+            <a
+              class="work_card--link"
+              href="Content/Images/Wag.png"
+              target="_blank"
+            >
+              <img
+                class="work__img3"
+                src="Content/Images/Wag-InVision--thumb.png"
+                alt="UX Review"
+              />
+            </a>
+            <p class="work__caption">
+              I reviewed and marked up various UX funnels for best and worst
+              practices.
+            </p>
+          </div>
+          <div class="work_card work--1">
+            <a href="./Content/Images/BCR__Design.png" target="_blank">
+              <img
+                class="work__img1"
+                src="./Content/Images/BCR__Thumbnail.svg"
+                alt="Credit Repair web design"
+            /></a>
+            <p class="work__caption">
+              I designed a Credit Repair's website using Adobe Photoshop and
+              Adobe Illustrator
+            </p>
+          </div>
+          <div class="work_card work--2">
+            <a
+              class="work_card--link"
+              href="https://bhgaragedoor.net/"
+              target="_blank"
+            >
+              <img
+                class="work__img2"
+                src="Content/Images/BHGarageDoor.jpg"
+                alt="BH Garagedoor design"
+              />
+            </a>
+            <p class="work__caption">
+              I helped to develop the front-end for this website
+            </p>
+          </div>
+          <div class="work_card work--3">
+            <a
+              class="work_card--link"
+              href="Content/Examples/gridTemplate/Gird_Framework.html"
+              target="_blank"
+            >
+              <img
+                class="work__img3"
+                src="Content/Images/BlogPost.jpg"
+                alt="Blog post using CSS Grids"
+              />
+            </a>
+            <p class="work__caption">
+              I built a blog post style website using CSS Grids to align
+              everything
+            </p>
+          </div>
+          <div class="work_card work--4">
+            <a
+              class="work_card--link"
+              href="Content/Images/ManlyZone.png"
+              target="_blank"
+            >
+              <img
+                class="work__img3"
+                src="Content/Images/Manly-Zone_Thumbnail.png"
+                alt="Blog post using CSS Grids"
+              />
+            </a>
+            <p class="work__caption">
+              I helped by implimenting a design into a wordpress site
+            </p>
+          </div>
 
-        <!--<div class="work_card work--6">
+          <!--<div class="work_card work--6">
           <a class="work_card--link" href="Content/Examples/gridTemplate/Gird_Framework.html" target="_blank">
             <img class="work__img3" src="Content/Images/BlogPost.jpg" alt="Blog post using CSS Grids">
           </a>
           <p class="work__caption">I built a blog post style website using CSS Grids to align everything</p>
         </div>-->
-    </div>
-    </div>
-    <!-- End of recent work <ul> -->
-    <div class="footer">
-    <div class="cta cta--long">
-      <a href="mailto:david.inabinette@gmail.com?Subject=Portfolio%20website">
-      <div class="btn btn__cta--long">
-        <p class="btn__text">Create</p>
+        </div>
       </div>
-    </a>
-      <h2 class="cta__subtitle">Lets work together</h2>
-    </div>
-<!-- begin of footer which contains social media links with corresponding icons -->
-      <ul class="footer__ul">
-        <li class="footer__icon">
-          <a class="footer__link" target="_blank" href="https://github.com/Davidi919">
-            <img class="footer__img" src="Content/Icons/github.svg" alt="github profile">
+      <!-- End of recent work <ul> -->
+      <div class="footer">
+        <div class="cta cta--long">
+          <a
+            href="mailto:david.inabinette@gmail.com?Subject=Portfolio%20website"
+          >
+            <div class="btn btn__cta--long">
+              <p class="btn__text">Create</p>
+            </div>
           </a>
-        </li>
-        <li class="footer__icon">
-          <a class="footer__link" target="_blank" href="https://codepen.io/Davidi919/">
-            <img class="footer__img" src="Content/Icons/codepen.svg" alt="Codepen profile">
-          </a>
-        </li>
-        <li class="footer__icon">
-          <a class="footer__link" target="_blank" href="https://www.linkedin.com/in/davidinabinette/">
-            <img class="footer__img" src="Content/Icons/linkedin.svg" alt="Linkedin profile"></a>
-        </li>
-        <li class="footer__icon">
-          <a class="footer__link" target="_blank" href="https://twitter.com/DavidInabinette">
-            <img class="footer__img" src="Content/Icons/twitter.svg" alt="Twitter profile"></a>
-        </li>
-        <!--<li class="footer__icon">
+          <h2 class="cta__subtitle">Lets work together</h2>
+        </div>
+        <!-- begin of footer which contains social media links with corresponding icons -->
+        <ul class="footer__ul">
+          <li class="footer__icon">
+            <a
+              class="footer__link"
+              target="_blank"
+              href="https://github.com/Davidi919"
+            >
+              <img
+                class="footer__img"
+                src="Content/Icons/github.svg"
+                alt="github profile"
+              />
+            </a>
+          </li>
+          <li class="footer__icon">
+            <a
+              class="footer__link"
+              target="_blank"
+              href="https://codepen.io/Davidi919/"
+            >
+              <img
+                class="footer__img"
+                src="Content/Icons/codepen.svg"
+                alt="Codepen profile"
+              />
+            </a>
+          </li>
+          <li class="footer__icon">
+            <a
+              class="footer__link"
+              target="_blank"
+              href="https://www.linkedin.com/in/davidinabinette/"
+            >
+              <img
+                class="footer__img"
+                src="Content/Icons/linkedin.svg"
+                alt="Linkedin profile"
+            /></a>
+          </li>
+          <li class="footer__icon">
+            <a
+              class="footer__link"
+              target="_blank"
+              href="https://twitter.com/DavidInabinette"
+            >
+              <img
+                class="footer__img"
+                src="Content/Icons/twitter.svg"
+                alt="Twitter profile"
+            /></a>
+          </li>
+          <!--<li class="footer__icon">
           <a class="footer__link" href="https://www.instagram.com/davidi919/">
             <img class="footer__img" src="Content/Icons/instagram.svg" alt="Instagram profile"></a>
         </li>-->
-        <li class="footer__icon">
-          <a class="footer__link" href="mailto:david.inabinette@gmail.com?Subject=Portfolio%20website">
-            <img class="footer__img" src="Content/Icons/email.svg" alt="Email me!"></a>
-        </li>
-      </ul>
-      <div class="copywrite">
-        &copy; David Inabinette <script>document.write(' ' + new Date().getFullYear() + ' ');</script>
+          <li class="footer__icon">
+            <a
+              class="footer__link"
+              href="mailto:david.inabinette@gmail.com?Subject=Portfolio%20website"
+            >
+              <img
+                class="footer__img"
+                src="Content/Icons/email.svg"
+                alt="Email me!"
+            /></a>
+          </li>
+        </ul>
+        <div class="copywrite">
+          &copy; David Inabinette
+          <script>
+            document.write(" " + new Date().getFullYear() + " ");
+          </script>
+        </div>
       </div>
+      <!-- end of body__container v  -->
     </div>
-    <!-- end of body__container v  -->
-  </div>
     <!-- end of body__container ^ -->
-
-
-
-
-</body>
-
+  </body>
 </html>
