@@ -190,6 +190,11 @@ a {
     box-shadow: none;
   }
 }
+.svg_bg {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
 
 /*header sytling*/
 header {
@@ -211,7 +216,7 @@ header {
 }
 
 #intro-wrapper {
-  background-color: $bg-white;
+  background-color: transparent;
   .intro_text {
     text-align: center;
     position: absolute;
@@ -242,8 +247,6 @@ header {
   height: auto;
 }
 .abt {
-  // background-color: $primary-lav;
-  background-image: url("../Content/Images/content/abt_bg.svg");
   height: 300px;
   margin-top: -150px;
   padding-top: 20px;
