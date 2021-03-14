@@ -202,14 +202,15 @@ header .header-con {
   align-items: center;
 }
 header .header_profile {
-  margin: 5px auto auto 20px;
+  margin: 5px auto auto 60px;
 }
 header .header-cta {
-  margin: auto 20px auto auto;
+  margin: auto 60px auto auto;
 }
 
 #intro-wrapper {
   background-color: transparent;
+  margin-top: 150px;
 }
 #intro-wrapper .intro_text {
   text-align: center;
@@ -225,6 +226,11 @@ header .header-cta {
 }
 #intro-wrapper .intro_img-con {
   margin-left: 60px;
+}
+#intro-wrapper .intro_img-con img {
+  width: 35vw;
+  max-width: 550px;
+  height: auto;
 }
 
 .intro__title {
@@ -244,7 +250,8 @@ header .header-cta {
 
 .abt {
   height: 300px;
-  margin-top: -150px;
+  position: relative;
+  top: -175px;
   padding-top: 20px;
   text-align: right;
   color: white;
@@ -255,9 +262,8 @@ header .header-cta {
 }
 .abt .abt__text {
   float: right;
-  min-width: 300px;
-  max-width: 800px;
-  margin: 15px;
+  max-width: 53%;
+  margin: 30px 60px auto auto;
   line-height: 1.95rem;
   font-size: 1.5rem;
 }
@@ -265,6 +271,11 @@ header .header-cta {
 .work_wrapper {
   text-align: center;
   margin: 0 auto;
+}
+.work_wrapper #work-title_con {
+  position: relative;
+  top: -70px;
+  margin-bottom: -70px;
 }
 .work_wrapper img {
   display: block;
@@ -281,9 +292,9 @@ header .header-cta {
   padding-bottom: 10px;
 }
 .work_wrapper .work__title {
-  margin-top: 50px;
   font-size: 4rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 .work_wrapper .work--subTitle {
   margin: 10px auto;
