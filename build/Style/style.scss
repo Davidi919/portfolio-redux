@@ -151,7 +151,8 @@ html {
 }
 @media only screen and (min-width: 2000px) {
   .intro-con,
-  .header-con, .abt-wrapper {
+  .header-con,
+  .abt-wrapper {
     width: 2000px;
     margin: 0 auto;
   }
@@ -297,7 +298,6 @@ header {
     padding-bottom: 10px;
   }
   .work__title {
-    
     font-size: 4rem;
     font-weight: 500;
     white-space: nowrap;
@@ -387,7 +387,6 @@ header {
   .footer_content-wrapper {
     position: relative;
     bottom: -135px;
-
   }
   .foot_bg {
     transform: rotate(180deg) scaleX(-1);
@@ -421,7 +420,6 @@ header {
     padding-top: 50px;
   }
   .copywrite {
-    
     text-transform: uppercase;
     font-size: 1.5rem;
     padding-top: 50px;
