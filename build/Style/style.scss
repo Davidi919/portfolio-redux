@@ -145,7 +145,7 @@ table {
 
 /*General html Rules*/
 html {
-  font-size: 14px;
+  font-size: 12px;
   font-family: $font-stack;
   margin: 0;
 }
@@ -166,12 +166,13 @@ a {
 }
 .pic_circ {
   border-radius: 50%;
+  width: 75px;
 }
 /*button rules*/
 .btn {
-  padding: 15px 20px;
+  padding: 10px 15px;
   width: max-content;
-  font-size: 2rem;
+  font-size: 1.25rem;
   background-color: $primary-blue;
   color: white;
   border-radius: 5px;
@@ -200,7 +201,7 @@ a {
 
 /*header sytling*/
 header {
-  margin: 20px auto 70px auto;
+  margin: 10px auto 100px auto;
   width: 100%;
   height: 8.5em;
 
@@ -219,7 +220,7 @@ header {
 
 #intro-wrapper {
   background-color: transparent;
-  margin-top: 150px;
+  margin-top: 200px;
   .intro_text {
     transition: all 0.3s linear;
     text-align: center;
@@ -270,18 +271,20 @@ header {
     margin: 80px auto 10px auto;
     font-size: 4rem;
   }
-  .abt__text {
-    float: right;
-    max-width: 53%;
-    margin: 30px 60px auto auto;
-    line-height: 1.95rem;
-    font-size: 1.5rem;
+  .abt-wrapper {
+    .abt__text {
+      float: right;
+      max-width: 53%;
+      margin: 50px 60px auto auto;
+      line-height: 1.95rem;
+      font-size: 1.25rem;
+    }
   }
 }
 
 .work_wrapper {
   text-align: center;
-  margin: 0 auto;
+  margin: 100px auto 0px auto;
   #work-title_con {
     position: relative;
     top: -70px;
@@ -303,7 +306,7 @@ header {
     padding-bottom: 10px;
   }
   .work__title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     white-space: nowrap;
   }
@@ -325,7 +328,7 @@ header {
   #grid__container {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(auto-fill, 300px);
     grid-gap: 5px 15px;
     background-color: $bg-white;
     padding: 10px;
@@ -339,8 +342,8 @@ header {
 .work_card {
   align-content: center;
   img {
-    width: 28em;
-    height: 16em;
+    width: 23em;
+    height: 11em;
     -o-object-fit: cover;
     object-fit: cover;
   }
@@ -566,9 +569,9 @@ header {
   .work_wrapper {
     #grid__container {
       .work_card {
-        img{
-        width: 18em;
-        height: 10em;
+        img {
+          width: 18em;
+          height: 10em;
         }
       }
     }
