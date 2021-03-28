@@ -237,12 +237,12 @@ header {
   .abt .abt__title {
     margin: 80px auto 10px auto;
     font-size: 4rem; }
-  .abt .abt-wrapper .abt__text {
+  .abt .abt__text {
     float: right;
     max-width: 53%;
     margin: 50px 60px auto auto;
-    line-height: 1.95rem;
-    font-size: 1.25rem; }
+    line-height: 2rem;
+    font-size: 1.5rem; }
 
 .work_wrapper {
   text-align: center;
@@ -286,7 +286,9 @@ header {
     grid-template-columns: repeat(auto-fill, 300px);
     grid-gap: 5px 15px;
     background-color: whitesmoke;
-    padding: 10px; }
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto; }
   .work_wrapper #grid__container > div {
     text-align: center;
     padding: 15px 0; }

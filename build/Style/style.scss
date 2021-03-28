@@ -271,14 +271,13 @@ header {
     margin: 80px auto 10px auto;
     font-size: 4rem;
   }
-  .abt-wrapper {
-    .abt__text {
-      float: right;
-      max-width: 53%;
-      margin: 50px 60px auto auto;
-      line-height: 1.95rem;
-      font-size: 1.25rem;
-    }
+
+  .abt__text {
+    float: right;
+    max-width: 53%;
+    margin: 50px 60px auto auto;
+    line-height: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -332,6 +331,8 @@ header {
     grid-gap: 5px 15px;
     background-color: $bg-white;
     padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   #grid__container > div {
     text-align: center;
