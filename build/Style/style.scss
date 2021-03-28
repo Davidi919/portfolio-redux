@@ -171,6 +171,8 @@ a {
 /*button rules*/
 .btn {
   padding: 10px 15px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-size: 1.25rem;
   background-color: $primary-blue;
@@ -215,6 +217,7 @@ header {
   }
   .header-cta {
     margin: auto 60px auto auto;
+    cursor: pointer;
   }
 }
 
@@ -349,7 +352,7 @@ header {
     object-fit: cover;
   }
   img:hover {
-    box-shadow: 0px 0px 2px rgba(100,100,100,.02);
+    box-shadow: 0px 0px 3px rgba(100,100,100,.7);
     transition: all 0.3s linear;
   }
 }
