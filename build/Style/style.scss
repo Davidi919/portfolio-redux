@@ -332,6 +332,8 @@ header {
     grid-gap: 5px 15px;
     background-color: $bg-white;
     padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   #grid__container > div {
     text-align: center;
