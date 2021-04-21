@@ -503,14 +503,16 @@ header {
   }
   .abt {
     top: -140px;
-    .abt__text {
-      max-width: unset;
-      padding: 50px 5px 0px 5px;
-      text-align: center;
-      margin: 10px auto;
-      font-size: 1.5em;
-      position: relative;
-      top: 50px;
+    .abt-wrapper {
+      .abt__text {
+        max-width: unset;
+        padding: 50px 5px 0px 5px;
+        text-align: center;
+        margin: 10px auto;
+        font-size: 1.5em;
+        position: relative;
+        top: 50px;
+      }
     }
     .abt_bg {
       svg {
