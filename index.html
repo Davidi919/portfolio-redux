@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <meta charset="UTF-8">
@@ -8,83 +7,16 @@
   <!-- css link -->
   <link href="./Style/style.css" type="text/css" rel="stylesheet" />
   <!-- Meta data -->
-  <!-- manifest link -->
-  <link rel="manifest" href="manifest.json">
-  </link>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="David Inabinette" />
   <meta name="description" content="A UX designer and developer with real people experience from around the world" />
   <meta property="og:title" content="David Inabinette | UX Designer & Developer">
-  <meta property="og:description"
-    content="A UX designer and developer with real people experience from around the world">
+  <meta property="og:description" content="A UX designer and developer with real people experience from around the world">
   <meta property="og:image" content="Content/Images/crawler_snapshot.png">
   <meta name="theme-color" content="#007AFF" />
   <meta name="robots" content="index,follow" />
   <link rel="shortcut icon" href="Content/Images/DIV_Logo.svg" />
   <meta name="googlebot" content="index,follow" />
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('<add-path-here>/pwabuilder-sw.js');
-      })};
-  </script>
-  <script>
-      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-
-      const el = document.createElement('pwa-update');
-      document.body.appendChild(el);
-  </script>
-  <script>
-      // This is the "Offline page" service worker
-
-      importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-
-      const CACHE = "pwabuilder-page";
-
-      // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-      const offlineFallbackPage = "index.html";
-
-      self.addEventListener("message", (event) => {
-        if (event.data && event.data.type === "SKIP_WAITING") {
-          self.skipWaiting();
-        }
-      });
-
-      self.addEventListener('install', async (event) => {
-        event.waitUntil(
-          caches.open(CACHE)
-            .then((cache) => cache.add(offlineFallbackPage))
-        );
-      });
-
-      if (workbox.navigationPreload.isSupported()) {
-        workbox.navigationPreload.enable();
-      }
-
-      self.addEventListener('fetch', (event) => {
-        if (event.request.mode === 'navigate') {
-          event.respondWith((async () => {
-            try {
-              const preloadResp = await event.preloadResponse;
-
-              if (preloadResp) {
-                return preloadResp;
-              }
-
-              const networkResp = await fetch(event.request);
-              return networkResp;
-            } catch (error) {
-
-              const cache = await caches.open(CACHE);
-              const cachedResp = await cache.match(offlineFallbackPage);
-              return cachedResp;
-            }
-          })());
-        }
-      });
-
-  </script>
-
 </head>
 
 <body>
@@ -93,7 +25,7 @@
   <header class="header-wrapper">
     <div class="header-con">
       <div class="header_profile">
-        <img class="profile_pic pic_circ" src="Content\Images\content\DI_LI.jpg" alt="Picture of David" />
+        <img class="profile_pic pic_circ" src="Content\Images\content\DI_LI.jpg" alt="Picture of David"/>
       </div>
       <div class="header-cta btn">
         <a class="btn_link" href="mailto:david.inabinette@gmail.com?Subject=Portfolio%20website">
@@ -110,17 +42,13 @@
         <h2 class="title_subtext">UX Designer<br />&<br />Developer</h2>
       </div>
       <div class="intro_img-con">
-        <img class="computer_img" src="Content\Images\content\Desktop Computer.svg"
-          alt="Picture of Computer Screen with keyboard and mouse" />
+        <img class="computer_img" src="Content\Images\content\Desktop Computer.svg" alt="Picture of Computer Screen with keyboard and mouse"/>
       </div>
     </div>
   </div>
   <div class="abt abt--bgColor">
     <div class="abt-wrapper">
-      <p class="abt__text">I’m a UX designer and developer living in Chicago, IL. I’m passionate about the user’s
-        experience and making sure that the product is inclusive and equitable. Whether that’s by testing across devices
-        to ensure compatibility, or providing accessibility options so the next billion users are able to enjoy the
-        product.
+      <p class="abt__text">I’m a UX designer and developer living in Chicago, IL. I’m passionate about the user’s experience and making sure that the product is inclusive and equitable. Whether that’s by testing across devices to ensure compatibility, or providing accessibility options so the next billion users are able to enjoy the product.
       </p>
     </div>
     <div class="abt_bg svg_bg">
@@ -176,8 +104,7 @@
         </p>
       </div>
       <div class="work_card">
-        <a class="work_card--link" href="Content/Images/Optimized Signup Funnel--MOBILE.pdf" target="_blank"
-          rel="noopener">
+        <a class="work_card--link" href="Content/Images/Optimized Signup Funnel--MOBILE.pdf" target="_blank" rel="noopener">
           <img class="work__img3" src="Content\Images\Optimized-Signup-Funnel-MOBILE--thumb.png"
             alt="Optimized application funnel built in XD" />
         </a>
