@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <title>David Inabinette | Designer & Developer</title>
   <!-- css link -->
-  <link href="./Style/style.css" type="text/css" rel="stylesheet" />
+  <link href="./style/style.css" type="text/css" rel="stylesheet" />
   <!-- Meta data -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="David Inabinette" />
@@ -26,61 +26,85 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <meta name="googlebot" content="index,follow" />
-  <meta name="wot-verification" content="bdf260781d3f51a02730"/>
+  <meta name="wot-verification" content="bdf260781d3f51a02730" />
 </head>
 
 <body>
   <!-- main body body__container -->
-
-  <header class="header-wrapper">
+  <a name="top"></a>
+  <header class="header header--wrapper">
     <div class="header-con">
-      <div class="header_profile">
-        <img class="profile_pic pic_circ" src="Content/Images/content/DI_LI.jpg" alt="Picture of David" />
+      <div class="logo-link">
+        <a href="#top" class="link link--header text--hover--fx">div.design</a>
       </div>
-      <div class="header-cta btn">
-        <a class="btn_link" href="mailto:david.inabinette@gmail.com?Subject=Portfolio%20website">
-          <span class="btn_text">CONTACT</span>
-        </a>
+      <div class="list">
+        <ul class="ul--list">
+          <li class="li--item">
+            <a href="#" class="link link--header text--hover--fx">about</a>
+          </li>
+          <li class="li--item">
+            <a href="#" class="link link--header text--hover--fx">services</a>
+          </li>
+          <li class="li--item">
+            <a href="#" class="link link--header text--hover--fx">works</a>
+          </li>
+          <li class="li--item">
+            <a href="#" class="link link--header text--hover--fx">contact</a>
+          </li>
+          <li class="li--item">
+            <a href="#" class="link link--header text--hover--fx">resume</a>
+          </li>
+          <li class="li--item">
+            <a href="#" class="link link--header text--hover--fx">toggle here</a>
+          </li>
+          <li class="li--item">
+            <a href="#" class="link link--header text--hover--fx">globe here</a>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
 
-  <div id="intro-wrapper">
+  <div id="intro--wrapper">
     <div class="intro-con">
       <div class="intro_text">
-        <h1 class="intro__title intro--main">David Inabinette</h1>
-        <h2 class="title_subtext">UX Designer<br />&<br />Developer</h2>
-      </div>
-      <div class="intro_img-con">
-        <img class="computer_img" src="Content/Images/content/Desktop_Computer.svg"
-          alt="Picture of Computer Screen with keyboard and mouse" />
+        <h1 class="title intro--main">David Inabinette-Valencia</h1>
+        <h2 class="subtext">A UX/UI designer and front-end developer<br> with real people experience</h2>
+        <div class="btn btn--primary-color btn--cta">
+          <a href="" class="link link--btn">contact</a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="abt abt--bgColor">
+
+  <div class="abt abt--primary-color">
     <div class="abt-wrapper">
-      <p class="abt__text">I’m a UX designer and developer living in Chicago, IL. I’m passionate about the user’s
-        experience and making sure that the product is inclusive and equitable. Whether that’s by testing across devices
-        to ensure compatibility, or providing accessibility options so the next billion users are able to enjoy the
-        product.
-      </p>
+      <h1 class="title text--hover--fx">
+        about me
+      </h1>
+      <h2 class="subtitle">
+        I’m a UX designer and developer living in Chicago, IL. I’m passionate about the user’s experience and making sure that the product is inclusive and equitable. Whether that’s by testing across devices to ensure compatibility, or providing accessibility options so the next billion users are able to enjoy the product.
+      </h2>
     </div>
-    <div class="abt_bg svg_bg">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="425px"
-        viewBox="0 0 1366 352.167" preserveAspectRatio="none">
-        <defs>
-          <filter id="a" x="0" y="0" width="1366" height="352.167" filterUnits="userSpaceOnUse">
-            <feOffset dy="8" input="SourceAlpha" />
-            <feGaussianBlur result="b" />
-            <feFlood flood-color="#007aff" flood-opacity="0.412" />
-            <feComposite operator="in" in2="b" />
-            <feComposite in="SourceGraphic" />
-          </filter>
-        </defs>
-        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#a)">
-          <path d="M0,0H1366V235.237L0,344.167Z" fill="#6f5ef0" />
-        </g>
-      </svg>
+  </div>
+
+  <!-- services container -->
+  <div class="services">
+    <h1 class="title">
+      my services
+    </h1>
+    <div class="grid">
+      <div class="grid-item">
+        <h2 class="sub-heading">
+          responsive web design
+        </h2>
+        <div class="grid--img">
+          <img src="http://via.placeholder.com/200" alt="" class="services-img">
+        </div>
+        <h3 class="grid--subtitle">
+          Ut labore et dolore roipi mana aliqua. Enim adeop minim veeniam nostruklad
+        </h3>
+      </div>
     </div>
   </div>
 
