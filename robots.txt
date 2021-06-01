@@ -1,1 +1,3 @@
-
+User-agent: googlebot
+Disallow: /style/
+Disallow: /images/content/
