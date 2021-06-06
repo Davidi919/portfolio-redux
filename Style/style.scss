@@ -13,14 +13,14 @@ $semibold-weight: 600;
 $bold-weight: 700;
 
 //test border for problem solving/troubleshooting
-$test-border: 2px solid red;
+$tB: 2px solid red;
 
 //color palette variables
-$primary-color: #0063FF;
-$secondary-color: #6200EA;
+$primary-color: #0063ff;
+$secondary-color: #6200ea;
 
-$bg-color: #FFF;
-$btn-shadow-color: #4F44AA;
+$bg-color: #fff;
+$btn-shadow-color: #4f44aa;
 
 /* Lemon reset, or also known as the Meyer reset used to help with browser inconsistancies */
 body,
@@ -125,16 +125,6 @@ section {
   display: block;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
-}
-
 body {
   scroll-behavior: smooth;
   line-height: 1;
@@ -165,6 +155,35 @@ html {
   font-size: 12px;
   font-family: $font-stack;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: inherit;
+}
+h1, h2 {
+  text-transform: capitalize;
+}
+
+h1 { 
+  font-size: 3.5rem;
+  font-weight: $semibold-weight;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 2rem;
+  margin: 5px;
+  font-weight: $light-weight;
+}
+h3 {
+  font-size: 1.75rem;
+  font-weight: $ultraLight-weight;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 @media only screen and (min-width: 2000px) {
   .intro-con,
@@ -177,16 +196,6 @@ html {
 a {
   text-decoration: none;
   color: inherit;
-  font-size: inherit;
-  width: 100%;
-  height: 100%;
-}
-.pic_circ {
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
-  object-position: center;
 }
 /*button rules*/
 .btn {
@@ -198,11 +207,11 @@ a {
   background-color: $primary-color;
   color: white;
   border-radius: 5px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin: 5px auto;
   transition: 0.25s;
   box-shadow: 3px 3px $btn-shadow-color;
-  .btn_link {
+  .link--btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,29 +224,48 @@ a {
     box-shadow: none;
   }
 }
-.svg_bg {
-  width: 100%;
-  position: absolute;
-  z-index: -1;
+
+.text--hover--fx {
+  background: linear-gradient(
+    to bottom, $secondary-color 0%,
+    $secondary-color 100%
+  );
+  background-position: 0 105%;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  transition: background-size 0.2s;
+  transition: all 0.2s linear;
+
+}
+.text--hover--fx:hover {
+  background-size: 4px 1.25rem;
+
 }
 
 /*header sytling*/
 header {
-  margin: 10px auto 100px auto;
+  margin: 0 auto 100px auto;
   width: 100%;
-  height: 8.5em;
-
+  height: 80px;
+  font-size: 1.5rem;
+  background-color: $primary-color;
+  color: #fff;
   .header-con {
+    margin: 0 15px;
     display: flex;
+    height: 100%;
     justify-content: space-between;
+    align-content: center;
     align-items: center;
   }
-  .header_profile {
-    margin: 5px auto auto 60px;
+  ul {
+    text-transform: capitalize;
+    display: inline-flex;
+    align-items: stretch;
   }
-  .header-cta {
-    margin: auto 60px auto auto;
-    cursor: pointer;
+  li {
+    display: inline-block;
+    margin-right: 10px;
   }
 }
 
@@ -247,7 +275,7 @@ header {
   .intro_text {
     transition: all 0.3s linear;
     text-align: center;
-    
+
     h2 {
       font-size: 1.75rem;
       font-weight: 400;
@@ -257,7 +285,6 @@ header {
   }
   .intro_img-con {
     margin-left: 60px;
-    
   }
 }
 .intro__title {
@@ -275,7 +302,6 @@ header {
   transition: all 0.3s linear;
 }
 .abt {
-  
   padding-top: 20px;
   color: black;
   transition: all 0.3s linear;
