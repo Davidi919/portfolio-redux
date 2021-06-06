@@ -158,14 +158,21 @@ html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   color: inherit;
 }
-h1, h2 {
+h1,
+h2 {
   text-transform: capitalize;
 }
 
-h1 { 
+h1 {
   font-size: 3.5rem;
   font-weight: $semibold-weight;
   text-transform: capitalize;
@@ -227,7 +234,8 @@ a {
 
 .text--hover--fx {
   background: linear-gradient(
-    to bottom, $secondary-color 0%,
+    to bottom,
+    $secondary-color 0%,
     $secondary-color 100%
   );
   background-position: 0 105%;
@@ -235,11 +243,9 @@ a {
   background-size: 1px 1px;
   transition: background-size 0.2s;
   transition: all 0.2s linear;
-
 }
 .text--hover--fx:hover {
   background-size: 4px 1.25rem;
-
 }
 
 /*header sytling*/
