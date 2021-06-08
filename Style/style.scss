@@ -22,6 +22,8 @@ $secondary-color: #6200ea;
 $bg-color: #fff;
 $btn-shadow-color: #4f44aa;
 
+$box-shadow: 3px 3px 3px #0000004d;
+
 /* Lemon reset, or also known as the Meyer reset used to help with browser inconsistancies */
 body,
 div,
@@ -214,6 +216,7 @@ a {
 }
 /*button rules*/
 .btn {
+  display: block;
   cursor: pointer;
   padding: 10px 15px;
   width: -webkit-max-content;
@@ -240,6 +243,16 @@ a {
     box-shadow: none;
   }
 }
+.btn--secondary {
+  color: $primary-color;
+  background-color: white;
+  border: 2px solid $primary-color;
+  box-shadow: $box-shadow;
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+}
 
 .text--hover--fx {
   background: linear-gradient(
@@ -264,13 +277,20 @@ a {
 .side-bar {
   background-color: $primary-color;
   color: #fff;
-  width: 75%;
+  width: 60%;
   height: max-content;
   display: flex;
   flex-direction: row;
   padding: 30px 70px;
   margin-bottom: 50px;
-  box-shadow: 3px 3px 3px #0000004d;
+  box-shadow: $box-shadow;
+}
+.side-bar--xl {
+  width: 75%;
+}
+.side-bar--right {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /*header styling*/
@@ -281,6 +301,7 @@ header {
   font-size: 1.5rem;
   background-color: $primary-color;
   color: #fff;
+  box-shadow: 0 3px 4px #0000004d;
   .header-con {
     margin: 0 15px;
     display: flex;
@@ -347,76 +368,95 @@ header {
   margin-bottom: 250px;
   .title {
     text-align: center;
+    margin-bottom: 4rem;
   }
-
   .grid {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
+    grid-gap: 20px;
     padding: 10px;
     max-width: 1200px;
     margin: 0 auto 5rem auto;
     .grid-item {
       text-align: center;
       padding: 15px;
-      width: 200px;
+      width: 80%;
       background-color: transparent;
-      // &:hover {
-      //   background-color: $primary-color;
-      //   box-shadow: 0px 0px 30px $primary-color;
-      // }
       p {
         font-weight: $ultraLight-weight;
       }
     }
   }
-}
-
-.work_card {
-  align-content: center;
-  img {
-    width: 23em;
-    height: 11em;
-    -o-object-fit: cover;
-    object-fit: cover;
+  .btn {
+    width: 250px;
   }
 }
-.cta__subtitle {
-  text-align: center;
-  color: black;
-}
-.cta--long {
-  padding: 100px 0;
-  text-decoration: none;
-  font-size: 3rem;
-
-  a {
-    text-decoration: none;
-    :hover {
-      background-color: $primary-color;
-      border-color: $primary-color;
+.works {
+  .work-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 450px;
+    margin: 225px 0;
+    p {
+      font-weight: $light-weight;
+    }
+    .work-img {
+      position: relative;
+      flex: 0 1 60%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 50%;
+      
+      img {
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        background-clip: content-box;
+        padding: 10px;
+        // outline: $tB;
+        &:hover {
+          // left: 25%;
+          transform: scale(1.25);
+          z-index:2;
+        }
+      }
+      .work-img--tablet {
+        left: 5%;
+        z-index: 1;
+      }
+      .work-img--laptop {
+        z-index: 0;
+      }
+      .work-img--phone {
+        right: 10%;
+        z-index: 1;
+      }
+    }
+    .work-info {
+      flex: 0 1 45%;
+      margin-left: 5%;
+      h2 {
+        margin: 0 auto 50px auto;
+      }
+      .btn {
+        width: 225px;
+      }
+    }
+    .work-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 70%;
     }
   }
-  p {
-    margin: 0;
-    padding: 8px;
+  .work-container--right {
+    flex-direction: row-reverse;
   }
 }
-.btn__cta--long {
-  border: 10px solid white;
-  margin: 45px;
-  border-radius: 15px;
-  background-color: $secondary-color;
-  color: white;
-  font-size: 6rem;
-  font-weight: bold;
-  transition: 0.5s;
-  &:active {
-    background-color: $primary-color;
-    border-color: $primary-color;
-  }
-}
+
+
 
 .footer {
   width: 100%;
@@ -426,10 +466,6 @@ header {
   .footer_content-wrapper {
     position: relative;
     bottom: -135px;
-  }
-  .foot_bg {
-    transform: rotate(180deg) scaleX(-1);
-    top: 0;
   }
   .footer__img {
     width: 5em;
@@ -465,6 +501,9 @@ header {
     text-align: center;
   }
 }
+
+
+//responsive styling
 @media only screen and (max-width: 1024px) {
   header {
     .header-cta {
