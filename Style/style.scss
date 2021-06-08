@@ -18,11 +18,21 @@ $tB: 2px solid red;
 //color palette variables
 $primary-color: #0063ff;
 $secondary-color: #6200ea;
-
 $bg-color: #fff;
 $btn-shadow-color: #4f44aa;
 
+//shadow variables
 $box-shadow: 3px 3px 3px #0000004d;
+
+//input variables
+$input-border: 2px solid #5e6367;
+$input-bgColor: #F2F4F8;
+$input-focusColor: 0 0 3px $primary-color;
+
+// fx variables
+$trans-3s: all 0.3s ease-in-out;
+
+
 
 /* Lemon reset, or also known as the Meyer reset used to help with browser inconsistancies */
 body,
@@ -126,7 +136,11 @@ nav,
 section {
   display: block;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   scroll-behavior: smooth;
   line-height: 1;
@@ -229,7 +243,10 @@ a {
   text-transform: uppercase;
   margin: 5px auto;
   transition: 0.25s;
-  box-shadow: 3px 3px $btn-shadow-color;
+  box-shadow: $box-shadow;
+  &:focus-visible {
+    outline: 4px dotted $secondary-color;
+  }
   .link--btn {
     display: flex;
     justify-content: center;
@@ -237,6 +254,7 @@ a {
   }
   &:hover {
     background-color: $secondary-color;
+    transition: all 0.3s ease-in-out;
   }
   &:active {
     transform: translate(3px, 3px);
@@ -253,6 +271,27 @@ a {
     color: white;
   }
 }
+
+//general input rules
+input[type=text], input[type=email], textarea {
+  border: $input-border;
+  font-family: inherit;
+  background-color: $input-bgColor;
+  border-radius: 2.5px;
+  height: 3.25rem;
+  padding-left: 10px;
+  &:focus, &:focus-visible {
+    border: 2px solid $primary-color;
+    box-shadow: $input-focusColor;
+    outline: 3px solid transparent;
+  }
+}
+textarea {
+  height: unset;
+}
+
+
+
 
 .text--hover--fx {
   background: linear-gradient(
@@ -281,12 +320,13 @@ a {
   height: max-content;
   display: flex;
   flex-direction: row;
-  padding: 30px 70px;
-  margin-bottom: 50px;
+  padding: 30px 50px;
+  margin-bottom: 150px;
   box-shadow: $box-shadow;
 }
 .side-bar--xl {
   width: 75%;
+  padding: 30px 70px;
 }
 .side-bar--right {
   display: flex;
@@ -397,8 +437,8 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 450px;
-    margin: 225px 0;
+    height: 350px;
+    margin: 10px auto 400px auto;
     p {
       font-weight: $light-weight;
     }
@@ -409,7 +449,7 @@ header {
       align-items: flex-end;
       justify-content: center;
       width: 50%;
-      
+
       img {
         position: absolute;
         transition: all 0.3s ease-in-out;
@@ -418,19 +458,19 @@ header {
         // outline: $tB;
         &:hover {
           // left: 25%;
-          transform: scale(1.25);
-          z-index:2;
+          transform: scale(1.1);
+          z-index: 2;
         }
       }
       .work-img--tablet {
-        left: 5%;
+        left: 90px;
         z-index: 1;
       }
       .work-img--laptop {
         z-index: 0;
       }
       .work-img--phone {
-        right: 10%;
+        right: 100px;
         z-index: 1;
       }
     }
@@ -456,7 +496,38 @@ header {
   }
 }
 
-
+.contact-container {
+  border: $tB;
+  padding-left: 5rem;
+  .contact-subtitle {
+    width: 550px;
+  }
+  h2 {
+    font-weight: $semibold-weight;
+    margin-left: 0;
+  }
+  .list {
+    width: fit-content;
+  }
+  .li-item {
+    margin: 25px 0;
+    width: 125px;
+    text-transform: capitalize;
+    filter: brightness(80%);
+    a {
+      display: flex;
+      align-items: center;
+      font-weight: $semibold-weight;
+      transition: $trans-3s;
+      & > * {
+        margin-right: 15px;
+      }
+      &:hover {
+        filter: brightness(120%);
+      }
+    }
+  }
+}
 
 .footer {
   width: 100%;
@@ -501,7 +572,6 @@ header {
     text-align: center;
   }
 }
-
 
 //responsive styling
 @media only screen and (max-width: 1024px) {
