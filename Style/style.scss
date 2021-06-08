@@ -149,7 +149,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+button {
+  border: none;
+}
 /*General html Rules*/
 html {
   font-size: 12px;
@@ -186,9 +188,13 @@ h3 {
   font-size: 1.75rem;
   font-weight: $ultraLight-weight;
 }
-button {
-  border: none;
+p {
+  font-size: 1.25rem;
+  font-weight: $regular-weight;
+  line-height: 2rem;
+  word-spacing: 0.2rem;
 }
+
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -208,6 +214,7 @@ a {
 }
 /*button rules*/
 .btn {
+  cursor: pointer;
   padding: 10px 15px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -245,9 +252,25 @@ a {
   background-size: 1px 1px;
   transition: background-size 0.2s;
   transition: all 0.2s linear;
+  width: fit-content;
 }
 .text--hover--fx:hover {
   background-size: 4px 1.25rem;
+}
+.text--hover--fx.fx--tall:hover {
+  background-size: 4px 2.75rem;
+}
+
+.side-bar {
+  background-color: $primary-color;
+  color: #fff;
+  width: 75%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  padding: 30px 70px;
+  margin-bottom: 50px;
+  box-shadow: 3px 3px 3px #0000004d;
 }
 
 /*header styling*/
@@ -299,7 +322,7 @@ header {
       margin-bottom: 10rem;
       height: auto;
     }
-    
+
     button {
       align-self: flex-end;
       width: 225px;
@@ -311,87 +334,59 @@ header {
   font-weight: 700;
   min-width: 275px;
 }
-.intro__img {
-  /* similar styling as the avatar img, except set to a proportional width */
-  display: block;
-  margin: 0 auto;
-  padding-left: 0;
-  width: 35rem;
-  height: auto;
-  transition: all 0.3s linear;
-}
 .abt {
-  padding-top: 20px;
-  color: black;
-  transition: all 0.3s linear;
-
-  .abt__title {
-    font-size: 4rem;
-  }
-
-  .abt__text {
-    line-height: 2rem;
-    font-size: 1.5rem;
+  margin-bottom: 150px;
+}
+.abt--text {
+  margin-left: 15%;
+  h1 {
+    margin-bottom: 2.25rem;
   }
 }
-
-.work_wrapper {
-  text-align: center;
-  margin: 100px auto 0px auto;
-  #work-title_con {
-    position: relative;
-    top: -70px;
-    margin-bottom: -70px;
-  }
-  img {
-    display: block;
-    height: auto;
-    width: 60%;
-    margin: 60px auto;
-    border: 1px solid black;
-    border-radius: 2px;
-    transition: all 0.3s linear;
-  }
-  #work-title_wrapper {
-    color: black;
-    background-color: $bg-color;
-    width: auto;
-    padding-bottom: 10px;
-  }
-  .work__title {
-    font-size: 3rem;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  .work--subTitle {
-    margin: 10px auto;
-    font-size: 1.5rem;
-  }
-  .work__caption {
-    margin-top: -50px;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: black;
-  }
-  ul {
-    display: inline-block;
-    width: auto;
-    height: auto;
-  }
-  #grid__container {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, 300px);
-    grid-gap: 5px 15px;
-    background-color: $bg-color;
-    padding: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  #grid__container > div {
+.services {
+  .title {
     text-align: center;
-    padding: 15px 0;
   }
+}
+#work-title_wrapper {
+  color: black;
+  background-color: $bg-color;
+  width: auto;
+  padding-bottom: 10px;
+}
+.work__title {
+  font-size: 3rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.work--subTitle {
+  margin: 10px auto;
+  font-size: 1.5rem;
+}
+.work__caption {
+  margin-top: -50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: black;
+}
+ul {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+#grid__container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-gap: 5px 15px;
+  background-color: $bg-color;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#grid__container > div {
+  text-align: center;
+  padding: 15px 0;
 }
 
 .work_card {
@@ -401,10 +396,6 @@ header {
     height: 11em;
     -o-object-fit: cover;
     object-fit: cover;
-  }
-  img:hover {
-    box-shadow: 0px 0px 3px rgba(100, 100, 100, 0.7);
-    transition: all 0.3s linear;
   }
 }
 .cta__subtitle {
@@ -462,7 +453,6 @@ header {
     padding: 0;
     -webkit-filter: brightness(0.9);
     filter: brightness(0.9);
-    transition: 0.25s;
     &:hover {
       -webkit-filter: brightness(1.1);
       filter: brightness(1.1);
@@ -536,7 +526,7 @@ header {
     }
   }
   #intro-wrapper {
-    margin-top: 0px;
+    margin-top: 0;
     .intro_text {
       position: unset;
       margin-bottom: 45px;
@@ -547,7 +537,7 @@ header {
       img {
         top: -30px;
         display: block;
-        margin: 0px auto;
+        margin: 0 auto;
         width: 80%;
       }
     }
@@ -557,7 +547,7 @@ header {
     .abt-wrapper {
       .abt__text {
         max-width: unset;
-        padding: 50px 5px 0px 5px;
+        padding: 50px 5px 0 5px;
         text-align: center;
         margin: 10px auto;
         font-size: 1.5em;

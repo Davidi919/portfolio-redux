@@ -133,6 +133,10 @@ table {
   border-spacing: 0;
 }
 
+button {
+  border: none;
+}
+
 /*General html Rules*/
 html {
   font-size: 12px;
@@ -173,8 +177,11 @@ h3 {
   font-weight: 200;
 }
 
-button {
-  border: none;
+p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 2rem;
+  word-spacing: 0.2rem;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -197,6 +204,7 @@ a {
 
 /*button rules*/
 .btn {
+  cursor: pointer;
   padding: 10px 15px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -230,10 +238,27 @@ a {
   background-size: 1px 1px;
   transition: background-size 0.2s;
   transition: all 0.2s linear;
+  width: fit-content;
 }
 
 .text--hover--fx:hover {
   background-size: 4px 1.25rem;
+}
+
+.text--hover--fx.fx--tall:hover {
+  background-size: 4px 2.75rem;
+}
+
+.side-bar {
+  background-color: #0063ff;
+  color: #fff;
+  width: 75%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  padding: 30px 70px;
+  margin-bottom: 50px;
+  box-shadow: 3px 3px 3px #0000004d;
 }
 
 /*header styling*/
@@ -298,74 +323,53 @@ header li {
   min-width: 275px;
 }
 
-.intro__img {
-  /* similar styling as the avatar img, except set to a proportional width */
-  display: block;
-  margin: 0 auto;
-  padding-left: 0;
-  width: 35rem;
-  height: auto;
-  transition: all 0.3s linear;
-}
-
 .abt {
-  padding-top: 20px;
-  color: black;
-  transition: all 0.3s linear;
-}
-.abt .abt__title {
-  font-size: 4rem;
-}
-.abt .abt__text {
-  line-height: 2rem;
-  font-size: 1.5rem;
+  margin-bottom: 150px;
 }
 
-.work_wrapper {
+.abt--text {
+  margin-left: 15%;
+}
+.abt--text h1 {
+  margin-bottom: 2.25rem;
+}
+
+.services .title {
   text-align: center;
-  margin: 100px auto 0px auto;
 }
-.work_wrapper #work-title_con {
-  position: relative;
-  top: -70px;
-  margin-bottom: -70px;
-}
-.work_wrapper img {
-  display: block;
-  height: auto;
-  width: 60%;
-  margin: 60px auto;
-  border: 1px solid black;
-  border-radius: 2px;
-  transition: all 0.3s linear;
-}
-.work_wrapper #work-title_wrapper {
+
+#work-title_wrapper {
   color: black;
   background-color: #fff;
   width: auto;
   padding-bottom: 10px;
 }
-.work_wrapper .work__title {
+
+.work__title {
   font-size: 3rem;
   font-weight: 500;
   white-space: nowrap;
 }
-.work_wrapper .work--subTitle {
+
+.work--subTitle {
   margin: 10px auto;
   font-size: 1.5rem;
 }
-.work_wrapper .work__caption {
+
+.work__caption {
   margin-top: -50px;
   padding-left: 30px;
   padding-right: 30px;
   color: black;
 }
-.work_wrapper ul {
+
+ul {
   display: inline-block;
   width: auto;
   height: auto;
 }
-.work_wrapper #grid__container {
+
+#grid__container {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 300px);
@@ -375,7 +379,8 @@ header li {
   max-width: 1200px;
   margin: 0 auto;
 }
-.work_wrapper #grid__container > div {
+
+#grid__container > div {
   text-align: center;
   padding: 15px 0;
 }
@@ -388,10 +393,6 @@ header li {
   height: 11em;
   -o-object-fit: cover;
   object-fit: cover;
-}
-.work_card img:hover {
-  box-shadow: 0px 0px 3px rgba(100, 100, 100, 0.7);
-  transition: all 0.3s linear;
 }
 
 .cta__subtitle {
@@ -451,7 +452,6 @@ header li {
   padding: 0;
   -webkit-filter: brightness(0.9);
   filter: brightness(0.9);
-  transition: 0.25s;
 }
 .footer .footer__img:hover {
   -webkit-filter: brightness(1.1);
@@ -520,7 +520,7 @@ header li {
   }
 
   #intro-wrapper {
-    margin-top: 0px;
+    margin-top: 0;
   }
   #intro-wrapper .intro_text {
     position: unset;
@@ -533,7 +533,7 @@ header li {
   #intro-wrapper .intro_img-con img {
     top: -30px;
     display: block;
-    margin: 0px auto;
+    margin: 0 auto;
     width: 80%;
   }
 
@@ -542,7 +542,7 @@ header li {
   }
   .abt .abt-wrapper .abt__text {
     max-width: unset;
-    padding: 50px 5px 0px 5px;
+    padding: 50px 5px 0 5px;
     text-align: center;
     margin: 10px auto;
     font-size: 1.5em;
