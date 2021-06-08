@@ -173,6 +173,10 @@ h3 {
   font-weight: 200;
 }
 
+button {
+  border: none;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -232,9 +236,9 @@ a {
   background-size: 4px 1.25rem;
 }
 
-/*header sytling*/
+/*header styling*/
 header {
-  margin: 0 auto 100px auto;
+  margin: 0 auto 7rem auto;
   width: 100%;
   height: 80px;
   font-size: 1.5rem;
@@ -260,21 +264,32 @@ header li {
 }
 
 #intro--wrapper {
-  background-color: transparent;
-  margin-top: 200px;
+  margin-bottom: 200px;
+}
+#intro--wrapper h1 {
+  text-align: center;
 }
 #intro--wrapper .intro_text {
-  transition: all 0.3s linear;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+#intro--wrapper .intro_text .subtext-btn--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #intro--wrapper .intro_text h2 {
   font-size: 1.75rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: initial;
-  margin-top: 5px;
+  margin-bottom: 10rem;
+  height: auto;
 }
-#intro--wrapper .intro_img-con {
-  margin-left: 60px;
+#intro--wrapper .intro_text button {
+  align-self: flex-end;
+  width: 225px;
 }
 
 .intro__title {
@@ -284,7 +299,7 @@ header li {
 }
 
 .intro__img {
-  /* similar stlying as the avatar img, expcept set to a proportional width */
+  /* similar styling as the avatar img, except set to a proportional width */
   display: block;
   margin: 0 auto;
   padding-left: 0;
