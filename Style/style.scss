@@ -344,49 +344,33 @@ header {
   }
 }
 .services {
+  margin-bottom: 250px;
   .title {
     text-align: center;
   }
-}
-#work-title_wrapper {
-  color: black;
-  background-color: $bg-color;
-  width: auto;
-  padding-bottom: 10px;
-}
-.work__title {
-  font-size: 3rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-.work--subTitle {
-  margin: 10px auto;
-  font-size: 1.5rem;
-}
-.work__caption {
-  margin-top: -50px;
-  padding-left: 30px;
-  padding-right: 30px;
-  color: black;
-}
-ul {
-  display: inline-block;
-  width: auto;
-  height: auto;
-}
-#grid__container {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-gap: 5px 15px;
-  background-color: $bg-color;
-  padding: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-#grid__container > div {
-  text-align: center;
-  padding: 15px 0;
+
+  .grid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto 5rem auto;
+    .grid-item {
+      text-align: center;
+      padding: 15px;
+      width: 200px;
+      background-color: transparent;
+      // &:hover {
+      //   background-color: $primary-color;
+      //   box-shadow: 0px 0px 30px $primary-color;
+      // }
+      p {
+        font-weight: $ultraLight-weight;
+      }
+    }
+  }
 }
 
 .work_card {
