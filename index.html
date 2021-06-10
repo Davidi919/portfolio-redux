@@ -17,12 +17,12 @@
   <meta property="og:image" content="Content/Images/crawler_snapshot.png">
   <meta name="theme-color" content="#007AFF" />
   <meta name="robots" content="index,follow" />
-  <link rel="shortcut icon" href="Content/Images/DIV_Logo.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="Content/Icons/favicon_package_v0.16/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="Content/Icons/favicon_package_v0.16/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Content/Icons/favicon_package_v0.16/favicon-16x16.png">
-  <link rel="manifest" href="Content/Icons/favicon_package_v0.16/site.webmanifest">
-  <link rel="mask-icon" href="Content/Icons/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+  <!-- <link rel="shortcut icon" href="Content/Images/DIV_Logo.svg" /> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-icons/favicon-16x16.png">
+  <link rel="manifest" href="favicon-icons/site.webmanifest">
+  <link rel="mask-icon" href="favicon-icons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <meta name="googlebot" content="index,follow" />
@@ -288,53 +288,56 @@
       </h1>
     </div>
     <div class="contact-container">
-      <div class="contact-subtitle">
-        <h2>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</h2>
-      </div>
-      <ul class="list">
-        <li class="li-item">
-          <a href="https://github.com/Davidi919" class="link link--contact">
-            <img src="http://via.placeholder.com/25" alt="Github">
-            github.com
-          </a>
-        </li>
-        <li class="li-item">
-          <a href="https://www.linkedin.com/in/davidinabinette/" class="link link--contact">
-            <img src="http://via.placeholder.com/25" alt="LinkedIn">
-            LinkedIn.com
-          </a>
-        </li>
-        <li class="li-item">
-          <a href="https://www.behance.net/davidinabinette" class="link link--contact">
-            <img src="http://via.placeholder.com/25" alt="Behance">
-            Behance.com
-          </a>
-        </li>
-        <li class="li-item">
-          <a href="https://codepen.io/Davidi919" class="link link--contact">
-            <img src="http://via.placeholder.com/25" alt="Codepen">
-            codepen.io
-          </a>
-        </li>
-      </ul>
-      <div class="contact--input-container">
-        <form action="">
-          <div class="name-email">
-            <input type="text" id="fname" name="fname" placeholder="Name">
-            <input type="email" id="email" name="email" placeholder="Email Address">
-          </div>
-          <div class="comments">
-            <textarea id="message" name="message" rows="4" cols="50%" placeholder="Write your message here"></textarea>
-          </div>
-          <input type="submit" value="SEND A MESSAGE" class="btn">
-        </form>
-      </div>
-      <div class="map-container">
-        <div class="map--wrapper">
-          <iframe title="Chicago, IL location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190255.33858260696!2d-87.87204681033978!3d41.83390366656981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1622420601042!5m2!1sen!2sus"
-            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div class="flex-item flex--left">
+        <div class="contact-subtitle">
+          <h2>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</h2>
         </div>
+        <ul class="list">
+          <li class="li-item">
+            <a href="https://github.com/Davidi919" class="link link--contact">
+              <img src="http://via.placeholder.com/25" alt="Github">
+              github.com
+            </a>
+          </li>
+          <li class="li-item">
+            <a href="https://www.linkedin.com/in/davidinabinette/" class="link link--contact">
+              <img src="http://via.placeholder.com/25" alt="LinkedIn">
+              LinkedIn.com
+            </a>
+          </li>
+          <li class="li-item">
+            <a href="https://www.behance.net/davidinabinette" class="link link--contact">
+              <img src="http://via.placeholder.com/25" alt="Behance">
+              Behance.com
+            </a>
+          </li>
+          <li class="li-item">
+            <a href="https://codepen.io/Davidi919" class="link link--contact">
+              <img src="http://via.placeholder.com/25" alt="Codepen">
+              codepen.io
+            </a>
+          </li>
+        </ul>
+        <div class="contact--input-container">
+          <form action="">
+            <div class="name-email">
+              <input type="text" id="fname" name="fname" placeholder="Name">
+              <input type="email" id="email" name="email" placeholder="Email Address">
+            </div>
+            <div class="comments">
+              <textarea id="message" name="message" rows="4" placeholder="Write your message here"></textarea>
+            </div>
+            <input type="submit" value="SEND A MESSAGE" class="btn">
+          </form>
+        </div>
+      </div>
+      <div class="flex-item flex--right">
+
+        <iframe title="Chicago, IL location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190255.33858260696!2d-87.87204681033978!3d41.83390366656981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1622420601042!5m2!1sen!2sus"
+          width="100%" height="100%" style="border:2px solid #878787; border-radius: 5px;" allowfullscreen=""
+          loading="lazy"></iframe>
+
       </div>
     </div>
   </div>

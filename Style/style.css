@@ -247,6 +247,8 @@ textarea {
   background-size: 1px 1px;
   transition: background-size 0.2s;
   transition: all 0.2s linear;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content; }
 
 .text--hover--fx:hover {
@@ -259,6 +261,8 @@ textarea {
   background-color: #0063ff;
   color: #fff;
   width: 60%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   display: flex;
   flex-direction: row;
@@ -320,11 +324,6 @@ header {
     #intro--wrapper .intro_text button {
       align-self: flex-end;
       width: 225px; }
-
-.intro__title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  min-width: 275px; }
 
 .abt {
   margin-bottom: 150px; }
@@ -403,20 +402,32 @@ header {
 .works .work-container--right {
   flex-direction: row-reverse; }
 
+.contact .side-bar {
+  margin-bottom: 65px; }
+
 .contact-container {
-  border: 2px solid red;
-  padding-left: 5rem; }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5%; }
+  .contact-container .flex--right {
+    margin-right: 1rem;
+    height: 400px;
+    flex-basis: 50%; }
   .contact-container .contact-subtitle {
-    width: 550px; }
+    max-width: 550px; }
   .contact-container h2 {
     font-weight: 600;
     margin-left: 0; }
   .contact-container .list {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content; }
   .contact-container .li-item {
     margin: 25px 0;
     width: 125px;
     text-transform: capitalize;
+    -webkit-filter: brightness(80%);
     filter: brightness(80%); }
     .contact-container .li-item a {
       display: flex;
@@ -426,7 +437,22 @@ header {
       .contact-container .li-item a > * {
         margin-right: 15px; }
       .contact-container .li-item a:hover {
+        -webkit-filter: brightness(120%);
         filter: brightness(120%); }
+  .contact-container .contact--input-container {
+    max-width: 650px; }
+  .contact-container .name-email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+    .contact-container .name-email input {
+      flex-basis: 49%; }
+  .contact-container textarea {
+    width: 100%; }
+  .contact-container input[type=submit] {
+    border: none;
+    margin-top: 40px; }
 
 .footer {
   width: 100%;
