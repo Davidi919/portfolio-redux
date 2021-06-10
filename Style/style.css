@@ -204,13 +204,13 @@ a {
   transition: 0.25s;
   box-shadow: 3px 3px 3px #0000004d; }
   .btn:focus-visible {
-    outline: 4px dotted #6200ea; }
+    outline: 4px dotted #0099ff; }
   .btn .link--btn {
     display: flex;
     justify-content: center;
     align-items: center; }
   .btn:hover {
-    background-color: #6200ea;
+    background-color: #0099ff;
     transition: all 0.3s ease-in-out; }
   .btn:active {
     transform: translate(3px, 3px);
@@ -241,7 +241,7 @@ textarea {
   height: unset; }
 
 .text--hover--fx {
-  background: linear-gradient(to bottom, #6200ea 0%, #6200ea 100%);
+  background: linear-gradient(to bottom, #0099ff 0%, #0099ff 100%);
   background-position: 0 105%;
   background-repeat: repeat-x;
   background-size: 1px 1px;
