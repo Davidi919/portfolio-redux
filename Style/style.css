@@ -456,39 +456,26 @@ header {
 
 .footer {
   width: 100%;
-  height: auto;
-  margin-bottom: -10px;
-  position: relative; }
+  height: 175px;
+  margin-top: 200px;
+  color: #FFF;
+  background-color: #0063ff;
+  text-align: center;
+  text-transform: capitalize; }
   .footer .footer_content-wrapper {
-    position: relative;
-    bottom: -135px; }
-  .footer .footer__img {
-    width: 5em;
-    height: auto;
-    padding: 0;
-    -webkit-filter: brightness(0.9);
-    filter: brightness(0.9); }
-    .footer .footer__img:hover {
-      -webkit-filter: brightness(1.1);
-      filter: brightness(1.1); }
-  .footer .footer__ul {
-    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: baseline; }
-    .footer .footer__ul li {
-      justify-content: center; }
-  .footer .footer__icon {
-    justify-content: center;
-    align-items: center;
-    margin: 0 20px;
-    padding-top: 50px; }
-  .footer .copywrite {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    padding-top: 50px;
-    color: black;
-    text-align: center; }
+    height: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly; }
+  .footer .ul--list {
+    margin-top: 20px; }
+  .footer .li--item {
+    display: inline;
+    margin: 10px 1rem;
+    font-size: 1.25rem; }
+    .footer .li--item .text--hover--fx {
+      background-position: 0 110%; }
 
 @media only screen and (max-width: 1024px) {
   header .header-cta {
