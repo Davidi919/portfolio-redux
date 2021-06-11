@@ -225,14 +225,20 @@ a {
     background-color: #0063ff;
     color: white; }
 
-input[type=text], input[type=email], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
   border: 2px solid #5e6367;
   font-family: inherit;
-  background-color: #F2F4F8;
+  background-color: #f2f4f8;
   border-radius: 2.5px;
   height: 3.25rem;
   padding-left: 10px; }
-  input[type=text]:focus, input[type=text]:focus-visible, input[type=email]:focus, input[type=email]:focus-visible, textarea:focus, textarea:focus-visible {
+  input[type="text"]:focus, input[type="text"]:focus-visible,
+  input[type="email"]:focus,
+  input[type="email"]:focus-visible,
+  textarea:focus,
+  textarea:focus-visible {
     border: 2px solid #0063ff;
     box-shadow: 0 0 3px #0063ff;
     outline: 3px solid transparent; }
@@ -241,7 +247,7 @@ textarea {
   height: unset; }
 
 .text--hover--fx {
-  background: linear-gradient(to bottom, #0099ff 0%, #0099ff 100%);
+  background: linear-gradient(to bottom, rgba(0, 153, 255, 0.85) 0%, rgba(0, 153, 255, 0.85) 100%);
   background-position: 0 105%;
   background-repeat: repeat-x;
   background-size: 1px 1px;
@@ -250,12 +256,12 @@ textarea {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content; }
-
-.text--hover--fx:hover {
-  background-size: 4px 1.25rem; }
-
-.text--hover--fx.fx--tall:hover {
-  background-size: 4px 2.75rem; }
+  .text--hover--fx:hover {
+    background-size: 4px 1.25rem; }
+  .text--hover--fx:fx--medium {
+    background-size: 4px 2.5rem; }
+  .text--hover--fx.fx--tall:hover {
+    background-size: 4px 2.75rem; }
 
 .side-bar {
   background-color: #0063ff;
@@ -332,6 +338,8 @@ header {
   margin-left: 15%; }
   .abt--text h1 {
     margin-bottom: 2.25rem; }
+  .abt--text p {
+    max-width: 850px; }
 
 .services {
   margin-bottom: 250px; }
@@ -360,6 +368,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
+  max-width: 1600px;
   height: 350px;
   margin: 10px auto 400px auto; }
   .works .work-container p {
@@ -409,7 +418,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 5%; }
+  padding-left: 5%;
+  max-width: 1600px;
+  margin: 0 auto; }
   .contact-container .flex--right {
     margin-right: 1rem;
     height: 400px;
@@ -423,6 +434,8 @@ header {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content; }
+  .contact-container .text--hover--fx {
+    background-position: 0 110%; }
   .contact-container .li-item {
     margin: 25px 0;
     width: 125px;
@@ -450,7 +463,7 @@ header {
       flex-basis: 49%; }
   .contact-container textarea {
     width: 100%; }
-  .contact-container input[type=submit] {
+  .contact-container input[type="submit"] {
     border: none;
     margin-top: 40px; }
 
@@ -458,7 +471,7 @@ header {
   width: 100%;
   height: 175px;
   margin-top: 200px;
-  color: #FFF;
+  color: #fff;
   background-color: #0063ff;
   text-align: center;
   text-transform: capitalize; }
